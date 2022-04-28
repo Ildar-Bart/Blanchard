@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 
+  <!-- accardion -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <!-- tippy (toolpit) -->
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
@@ -21,6 +25,8 @@
   </script>
 
   <script src="js/script.js" defer></script>
+  <script src="js/tabs.js" defer></script>
+  <script src="js/tabs1.js" defer></script>
   <title>BLANCHARD</title>
 </head>
 <body>
@@ -157,7 +163,7 @@
       </div>
     </section>
 
-    <section class="section__gallery">
+    <section class="section__gallery section-offset">
       <div class="container gallery">
         <div class="gallery__left-block">
           <h2 class="gallery__title container-title">
@@ -170,149 +176,421 @@
             <option class="select__item">Скульптура</option>
           </select>
 
+          <ul class="gallery__list-time">
+            <li class="gallery__item-time">
+              <button class="gallery__bnt-time btn-reset">
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.934326" width="11" height="11" stroke="white"/>
+                </svg>
+                <span class="gallery__bnt-span">
+                  XIX век
+                </span>
+              </button>
+            </li>
+            <li class="gallery__item-time">
+              <button class="gallery__bnt-time btn-reset">
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.934326" width="11" height="11" stroke="white"/>
+                </svg>
+                <span class="gallery__bnt-span">
+                  XX&nbsp;век
+                </span>
+              </button>
+            </li>
+            <li class="gallery__item-time">
+              <button class="gallery__bnt-time btn-reset">
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.934326" width="11" height="11" stroke="white"/>
+                </svg>
+                <span class="gallery__bnt-span">
+                  Современность
+                </span>
+              </button>
+            </li>
+          </ul>
+
         </div>
-        <ul class="gallery__list-time">
-          <li class="gallery__item-time">
-            <button class="gallery__bnt-time btn-reset">
-              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.934326" width="11" height="11" stroke="white"/>
-              </svg>
-              <span class="gallery__bnt-span">
-                XIX век
-              </span>
-            </button>
-          </li>
-          <li class="gallery__item-time">
-            <button class="gallery__bnt-time btn-reset">
-              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.934326" width="11" height="11" stroke="white"/>
-              </svg>
-              <span class="gallery__bnt-span">
-                XX&nbsp;век
-              </span>
-            </button>
-          </li>
-          <li class="gallery__item-time">
-            <button class="gallery__bnt-time btn-reset">
-              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.934326" width="11" height="11" stroke="white"/>
-              </svg>
-              <span class="gallery__bnt-span">
-                Современность
-              </span>
-            </button>
-          </li>
-        </ul>
+
         <div class="gallery__right-block">
+          <div class="swiper gallery__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper gallery__swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide gallery__swiper-slide">
+                <img src="img/gallery/Rectangle 68.jpg" alt="">
+              </div>
+              <div class="swiper-slide gallery__swiper-slide">
+                <img src="img/gallery/Rectangle 69.jpg" alt="">
+              </div>
+              <div class="swiper-slide gallery__swiper-slide">
+                <img src="img/gallery/Rectangle 70.jpg" alt="">
+              </div>
+              <div class="swiper-slide gallery__swiper-slide">
+                <img src="img/gallery/Rectangle 71.jpg" alt="">
+              </div>
+              <div class="swiper-slide gallery__swiper-slide">
+                <img src="img/gallery/Rectangle 72.jpg" alt="">
+              </div>
+              <div class="swiper-slide gallery__swiper-slide">
+                <img src="img/gallery/Rectangle 73.jpg" alt="">
+              </div>
+            </div>
+
+              <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev-gal">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="#666666"/>
+                <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" stroke="black"/>
+                <path d="M16 20L11 15L16 10" stroke="white"/>
+              </svg>
+            </div>
+            <div class="swiper-button-next-gal">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="#666666"/>
+                <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" stroke="black"/>
+                <path d="M14 20L19 15L14 10" stroke="white"/>
+              </svg>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section-catalog">
+    <section class="section-catalog section-offset">
       <div class="container catalog">
         <div class="catalog__block-top">
           <h2 class="catalog__title section-title">
             Каталог
           </h2>
-          <p class="catalog__descr">
+          <p class="catalog__text">
             Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
           </p>
         </div>
         <div class="catalog__block-bottom">
-          <div class="catalog__block-painter">
-            <h3 class="catalog__painter-name-descr">
-              Доменико Гирландайо
-            </h3>
-            <p class="catalog__painter-years-of-life">2&nbsp;июня 1448&nbsp;&mdash; 11&nbsp;января 1494.</p>
-            <p class="catalog__painter-biography">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).</p>
+
+          <div class="catalog__tabs-content">
+
+            <div class="catalog__tabs-item" data-target="one">
+              <div class="catalog__tabs-item-content">
+                <!-- <img src="img/catalog/common-image.svg" aria-hidden="true"> -->
+                <div class="catalog__tabs-item-common-text">
+                  <span class="catalog__tabs-item-common-text-title">Что мы&nbsp;о&nbsp;нём знаем?</span>
+                  <span class="catalog__tabs-item-common-text-descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</span>
+                  <a href="" class="catalog__tabs-item-common-text-link">В&nbsp;галерею</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog__tabs-item" data-target="two">
+              <div class="catalog__tabs-item-content">
+                <img src="img/catalog/common-image.svg" aria-hidden="true">
+                <div class="catalog__tabs-item-common-text">
+                  <span class="catalog__tabs-item-common-text-title">Что мы&nbsp;о&nbsp;нём знаем?</span>
+                  <span class="catalog__tabs-item-common-text-descr">Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!</span>
+                  <a href="" class="catalog__tabs-item-common-text-link">В&nbsp;галерею</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="catalog__tabs-item catalog__tabs-item--active" data-target="twelve">
+              <div class="catalog__tabs-item-content">
+                <img src="img/catalog/image-3.jpg" alt="">
+                <div class="catalog__tabs-item-common-text">
+                  <h3 class="catalog__tabs-item-painter-name">
+                    Доменико Гирландайо
+                  </h3>
+                  <p class="catalog__tabs-item-painter-years">2&nbsp;июня 1448&nbsp;&mdash; 11&nbsp;января 1494.</p>
+                  <p class="catalog__tabs-item-biography">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).</p>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="catalog__block-general-list">
-            <ul class="catalog__list-paintes">
-              <li class="catalog__item-painttes">
-                <div class="catalog__item-accordion-top">
+
+          <div class="catalog__accordion-content">
+            <ul class="catalog__accordion-list-year" id="accordion-catalog">
+              <li class="catalog__accordion-item-year">
+                <div class="catalog__accordion-top" tabindex="0">
                   <span class="catalog__item-period">
                     C&nbsp;1400 по&nbsp;1499&nbsp;гг.
                   </span>
-                  <button class="catalog__item-accordion-btn">
+                  <button class="catalog__accordion-btn" tabindex="-1">
                     <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M17.3333 1.33334L9 9.66667L0.666664 1.33334" stroke="black"/>
                     </svg>
                   </button>
                 </div>
+                <div class="catalog__accordion-bottom">
+                  <div class="catalog__accordion-bottom-block catalog__accordion-bottom-block--1">
+                    <ul class="catalog__tabs-nav-painttes-list">
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset" data-path="one">
+                          Бенедетто ди&nbsp;Биндо
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset" data-path="two">
+                          Бергоньоне, Амброджо
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset" data-path="two">
+                        Биссоло, Франческо
+                      </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset" data-path="two">
+                          Больтраффио, Джованни
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset" data-path="two">
+                          Бонсиньори, Франческо
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset" data-path="two">
+                          Боттичини, Рафаэлло
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset" data-path="two">
+                          Брамантино
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset" data-path="two">
+                          Бреа, Людовико
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset" data-path="two">
+                          Бьяджо д&rsquo;Антонио Туччи
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset" data-path="two">
+                          Веккьетта
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset" data-path="two">
+                          Андреа Верроккьо
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes">
+                        <button class="catalog__tabs-nav-item-btn btn-reset catalog__tabs-nav-item-btn--active" data-path="twelve">
+                          Доменико Гирландайо
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Беноццо Гоццоли
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Граначчи, Франческо</button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Грегорио ди&nbsp;Чекко
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Джованни да&nbsp;Удине
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Джованни ди&nbsp;Паоло
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Джорджоне
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Парентино, Бернардо
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Пезеллино
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Пьетро Перуджино
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Перуцци, Бальдассаре
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Пизанелло
+                        </button>
+                      </li>
+                      <li class="catalog__tabs-nav-item-paintes-1">
+                        <button class="catalog__tabs-nav-item-btn btn-reset btn-reset" data-path="one">
+                          Пинтуриккьо
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </li>
-              <li class="catalog__item-painttes">
-                <div class="catalog__item-accordion-top">
+              <li class="catalog__accordion-item-year">
+                <div class="catalog__accordion-top" tabindex="0">
                   <span class="catalog__item-period">
                     C&nbsp;1500 по&nbsp;1599&nbsp;гг.
                   </span>
-                  <button class="catalog__item-accordion-btn">
+                  <button class="catalog__accordion-btn" tabindex="-1">
                     <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M17.3333 1.33334L9 9.66667L0.666664 1.33334" stroke="black"/>
                     </svg>
                   </button>
                 </div>
+                <div class="catalog__accordion-bottom">
+                  <div class="catalog__accordion-bottom-block">
+                    <div class="catalog__accordion-bottom-box">
+                    </div>
+                    <div class="catalog__accordion-bottom-text">
+                      <h4 class="catalog__accordion-bottom-text-h4">Здесь пока пусто</h4>
+                      <p class="catalog__accordion-bottom-text-p">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a href="" class="catalog__accordion-bottom-text-link">В&nbsp;галерею</a>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="catalog__item-painttes">
-                <div class="catalog__item-accordion-top">
+              <li class="catalog__accordion-item-year">
+                <div class="catalog__accordion-top" tabindex="0">
                   <span class="catalog__item-period">
                     C&nbsp;1600 по&nbsp;1699&nbsp;гг.
                   </span>
-                  <button class="catalog__item-accordion-btn">
+                  <button class="catalog__accordion-btn" tabindex="-1">
                     <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M17.3333 1.33334L9 9.66667L0.666664 1.33334" stroke="black"/>
                     </svg>
                   </button>
                 </div>
+                <div class="catalog__accordion-bottom">
+                  <div class="catalog__accordion-bottom-block">
+                    <div class="catalog__accordion-bottom-box">
+                    </div>
+                    <div class="catalog__accordion-bottom-text">
+                      <h4 class="catalog__accordion-bottom-text-h4">Здесь пока пусто</h4>
+                      <p class="catalog__accordion-bottom-text-p">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a href="" class="catalog__accordion-bottom-text-link">В&nbsp;галерею</a>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="catalog__item-painttes">
-                <div class="catalog__item-accordion-top">
+              <li class="catalog__accordion-item-year">
+                <div class="catalog__accordion-top" tabindex="0">
                   <span class="catalog__item-period">
                     C&nbsp;1700 по&nbsp;1799&nbsp;гг.
                   </span>
-                  <button class="catalog__item-accordion-btn">
+                  <button class="catalog__accordion-btn" tabindex="-1">
                     <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M17.3333 1.33334L9 9.66667L0.666664 1.33334" stroke="black"/>
                     </svg>
                   </button>
                 </div>
+                <div class="catalog__accordion-bottom">
+                  <div class="catalog__accordion-bottom-block">
+                    <div class="catalog__accordion-bottom-box">
+                    </div>
+                    <div class="catalog__accordion-bottom-text">
+                      <h4 class="catalog__accordion-bottom-text-h4">Здесь пока пусто</h4>
+                      <p class="catalog__accordion-bottom-text-p">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a href="" class="catalog__accordion-bottom-text-link">В&nbsp;галерею</a>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="catalog__item-painttes">
-                <div class="catalog__item-accordion-top">
+              <li class="catalog__accordion-item-year">
+                <div class="catalog__accordion-top" tabindex="0">
                   <span class="catalog__item-period">
                     C&nbsp;1800 по&nbsp;1899&nbsp;гг.
                   </span>
-                  <button class="catalog__item-accordion-btn">
+                  <button class="catalog__accordion-btn" tabindex="-1">
                     <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M17.3333 1.33334L9 9.66667L0.666664 1.33334" stroke="black"/>
                     </svg>
                   </button>
                 </div>
+                <div class="catalog__accordion-bottom">
+                  <div class="catalog__accordion-bottom-block">
+                    <div class="catalog__accordion-bottom-box">
+                    </div>
+                    <div class="catalog__accordion-bottom-text">
+                      <h4 class="catalog__accordion-bottom-text-h4">Здесь пока пусто</h4>
+                      <p class="catalog__accordion-bottom-text-p">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a href="" class="catalog__accordion-bottom-text-link">В&nbsp;галерею</a>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="catalog__item-painttes">
-                <div class="catalog__item-accordion-top">
+              <li class="catalog__accordion-item-year">
+                <div class="catalog__accordion-top" tabindex="0">
                   <span class="catalog__item-period">
                     C&nbsp;1900 по&nbsp;1999&nbsp;гг.
                   </span>
-                  <button class="catalog__item-accordion-btn">
+                  <button class="catalog__accordion-btn" tabindex="-1">
                     <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M17.3333 1.33334L9 9.66667L0.666664 1.33334" stroke="black"/>
                     </svg>
                   </button>
                 </div>
+                <div class="catalog__accordion-bottom">
+                  <div class="catalog__accordion-bottom-block">
+                    <div class="catalog__accordion-bottom-box">
+                    </div>
+                    <div class="catalog__accordion-bottom-text">
+                      <h4 class="catalog__accordion-bottom-text-h4">Здесь пока пусто</h4>
+                      <p class="catalog__accordion-bottom-text-p">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a href="" class="catalog__accordion-bottom-text-link">В&nbsp;галерею</a>
+                    </div>
+                  </div>
+                </div>
               </li>
-              <li class="catalog__item-painttes">
-                <div class="catalog__item-accordion-top">
+              <li class="catalog__accordion-item-year">
+                <div class="catalog__accordion-top" tabindex="0">
                   <span class="catalog__item-period">
                     C&nbsp;2000&nbsp;г.
                   </span>
-                  <button class="catalog__item-accordion-btn">
+                  <button class="catalog__accordion-btn" tabindex="-1">
                     <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M17.3333 1.33334L9 9.66667L0.666664 1.33334" stroke="black"/>
                     </svg>
                   </button>
                 </div>
+                <div class="catalog__accordion-bottom">
+                  <div class="catalog__accordion-bottom-block">
+                    <div class="catalog__accordion-bottom-box">
+                    </div>
+                    <div class="catalog__accordion-bottom-text">
+                      <h4 class="catalog__accordion-bottom-text-h4">Здесь пока пусто</h4>
+                      <p class="catalog__accordion-bottom-text-p">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя</p>
+                      <a href="" class="catalog__accordion-bottom-text-link">В&nbsp;галерею</a>
+                    </div>
+                  </div>
+                </div>
               </li>
+
             </ul>
+
           </div>
         </div>
       </div>
@@ -323,108 +601,117 @@
         <h2 class="events-title section-title">
           События
         </h2>
-        <ul class="events__list">
-          <li class="events__item">
-            <article class="events__article-item">
-              <img src="img/events/Rectangle-101-1.jpg" alt="" class="events__article-item-img">
-              <div class="events__article-item-descr">
-                <span class="events__article-item-event">
-                  Музей им. Щусева <br>
-                  с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
-                </span>
-                <h4 class="events__article-item-title">
-                  Книжная гравюра в&nbsp;живом восприятии
-                </h4>
-                <p class="events__article-item-text">
-                  Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
-                </p>
-                <a href="" class="events__article-item-link">
-                  Подробнее
-                </a>
-              </div>
-            </article>
-          </li>
-          <li class="events__item">
-            <article class="events__article-item">
-              <img src="img/events/Rectangle-101-2.jpg" alt="" class="events__article-item-img">
-              <div class="events__article-item-descr">
-                <span class="events__article-item-event">
-                  ММОМА <br>
-                  24&nbsp;марта 19:00
-                </span>
-                <h4 class="events__article-item-title">
-                  &laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.
-                </h4>
-                <p class="events__article-item-text">
-                  Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
-                </p>
-                <a href="" class="events__article-item-link">
-                  Подробнее
-                </a>
-              </div>
-            </article>
-          </li>
-          <li class="events__item">
-            <article class="events__article-item">
-              <img src="img/events/Rectangle-101-3.jpg" alt="" class="events__article-item-img">
-              <div class="events__article-item-descr">
-                <span class="events__article-item-event">
-                  Еврейский музей <br>
-                  с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля
-                </span>
-                <h4 class="events__article-item-title">
-                  Выставка &laquo;Формация 2020&raquo;
-                </h4>
-                <p class="events__article-item-text">
-                  Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.
-                </p>
-                <a href="" class="events__article-item-link">
-                  Подробнее
-                </a>
-              </div>
-            </article>
-          </li>
-          <li class="events__item">
-            <article class="events__article-item">
-              <img src="img/events/Rectangle-101-4.jpg" alt="" class="events__article-item-img">
-              <div class="events__article-item-descr">
-                <span class="events__article-item-event">
-                  ММАМ <br>
-                  с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая
-                </span>
-                <h4 class="events__article-item-title">
-                  Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;
-                </h4>
-                <p class="events__article-item-text">
-                  Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
-                </p>
-                <a href="" class="events__article-item-link">
-                  Подробнее
-                </a>
-              </div>
-            </article>
-          </li>
-          <li class="events__item">
-            <article class="events__article-item">
-              <img src="img/events/Rectangle-101-5.jpg" alt="" class="events__article-item-img">
-              <div class="events__article-item-descr">
-                <span class="events__article-item-event">
-                  Третьяковка на&nbsp;Крымском валу <br>
-                  с&nbsp;30&nbsp;марта по&nbsp;30&nbsp;апреля
-                </span>
-                <h4 class="events__article-item-title">
-                  XXIV Международная биеннале молодого искусства
-                </h4>
-                <p class="events__article-item-text">
-                  Внезапно, реплицированные с&nbsp;зарубежных источников, современные исследования.
-                </p>
-                <a href="" class="events__article-item-link">
-                  Подробнее
-                </a>
-              </div>
-            </article>
-          </li>
-        </ul>
+
+        <div class="swiper events__swipper">
+          <div class="swiper-wrapper events__swiper-wrapper">
+            <div class="swiper-slide events__swiper-slide">
+              <article class="events__article-item">
+                <img src="img/events/Rectangle-101-1.jpg" alt="" class="events__article-item-img">
+                <div class="events__article-item-descr">
+                  <span class="events__article-item-event">
+                    Музей им. Щусева <br>
+                    с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
+                  </span>
+                  <h4 class="events__article-item-title">
+                    Книжная гравюра в&nbsp;живом восприятии
+                  </h4>
+                  <p class="events__article-item-text">
+                    Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+                  </p>
+                  <a href="" class="events__article-item-link">
+                    Подробнее
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide events__swiper-slide">
+              <article class="events__article-item">
+                <img src="img/events/Rectangle-101-2.jpg" alt="" class="events__article-item-img">
+                <div class="events__article-item-descr">
+                  <span class="events__article-item-event">
+                    ММОМА <br>
+                    24&nbsp;марта 19:00
+                  </span>
+                  <h4 class="events__article-item-title">
+                    &laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.
+                  </h4>
+                  <p class="events__article-item-text">
+                    Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
+                  </p>
+                  <a href="" class="events__article-item-link">
+                    Подробнее
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide events__swiper-slide">
+              <article class="events__article-item">
+                <img src="img/events/Rectangle-101-3.jpg" alt="" class="events__article-item-img">
+                <div class="events__article-item-descr">
+                  <span class="events__article-item-event">
+                    Еврейский музей <br>
+                    с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля
+                  </span>
+                  <h4 class="events__article-item-title">
+                    Выставка &laquo;Формация 2020&raquo;
+                  </h4>
+                  <p class="events__article-item-text">
+                    Идейные соображения высшего порядка, а&nbsp;также современная методология разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.
+                  </p>
+                  <a href="" class="events__article-item-link">
+                    Подробнее
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide events__swiper-slide">
+              <article class="events__article-item">
+                <img src="img/events/Rectangle-101-4.jpg" alt="" class="events__article-item-img">
+                <div class="events__article-item-descr">
+                  <span class="events__article-item-event">
+                    ММАМ <br>
+                    с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая
+                  </span>
+                  <h4 class="events__article-item-title">
+                    Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;
+                  </h4>
+                  <p class="events__article-item-text">
+                    Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+                  </p>
+                  <a href="" class="events__article-item-link">
+                    Подробнее
+                  </a>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide events__swiper-slide">
+              <article class="events__article-item">
+                <img src="img/events/Rectangle-101-5.jpg" alt="" class="events__article-item-img">
+                <div class="events__article-item-descr">
+                  <span class="events__article-item-event">
+                    Третьяковка на&nbsp;Крымском валу <br>
+                    с&nbsp;30&nbsp;марта по&nbsp;30&nbsp;апреля
+                  </span>
+                  <h4 class="events__article-item-title">
+                    XXIV Международная биеннале молодого искусства
+                  </h4>
+                  <p class="events__article-item-text">
+                    Внезапно, реплицированные с&nbsp;зарубежных источников, современные исследования.
+                  </p>
+                  <a href="" class="events__article-item-link">
+                    Подробнее
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="swiper-button-prev">
+          </div>
+          <div class="swiper-button-next">
+          </div>
+
+        </div>
       </div>
     </section>
 
