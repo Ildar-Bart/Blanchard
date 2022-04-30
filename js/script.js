@@ -20,8 +20,8 @@ let eventsswipper = new Swiper('.events__swipper', {
 
   // Navigation arrows (стрелки)
  navigation: {
-   nextEl: '.swiper-button-next',
-   prevEl: '.swiper-button-prev',
+   nextEl: '.swiper-button-next-event',
+  //  prevEl: '.swiper-button-prev-event',
  },
 
  // курсор перетаскивания
@@ -58,7 +58,7 @@ let eventsswipper = new Swiper('.events__swipper', {
  slidesPerGroup: 1,
 
  // бесконечный слайдер
- // loop: true,
+ loop: true,
 
  // свободный режим
  // freeMode: true,
@@ -122,7 +122,7 @@ tippy('#myButton-3', {
 
 
  // слайд в проектах
-let progectsswipper = new Swiper('.progects__swipper', {
+let progectsswipper = new Swiper('.projects__swipper', {
  // отступ между слайдами
  spaceBetween: 50,
 

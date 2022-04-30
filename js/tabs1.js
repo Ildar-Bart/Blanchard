@@ -15,8 +15,6 @@ let galleryswiper = new Swiper('.gallery__swiper', {
     clickable: true,
   },
 
-
-
   // курсор перетаскивания
   grabCursor: true,
 

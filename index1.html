@@ -6,122 +6,211 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <!-- simplebar -->
 
 
-<style>
-  .container {
-    max-width: 1920px;
-    padding: 160px;
-    border: 1px solid red;
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+
+  <style>
+    .container {
+      max-width: 1200px;
+      padding: 100px;
+      margin: 0 auto;
+      font-size: 18px;
+      background-image: url('/img/hero/image-1.jpg');
+    }
+
+    /* scroll-content */
+
+
+
+  .scroll-content {
+    width: 220px;
+    height: 200px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
   }
 
-  .gallery__left-block {
-  width: 25%;
+  body > div > div > div.simplebar-wrapper > div.simplebar-mask > div > div > div > div {
+    max-width: 220px;
+    padding: 10px 14px 10px 14px;
+    background-size: cover;
+    width: 80%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  body > div > div > div.simplebar-wrapper > div.simplebar-mask > div > div > div > div:nth-child(1) {
+    background-image: url('img/hero/realism/Rectangle\ 57.jpg');
+
+  }
+
+  .test-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  body > div > div > div.simplebar-wrapper > div.simplebar-mask > div > div > div > div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .simplebar-track {
+    right: 19px;
+
 }
 
-  .gallery__right-block {
-    width: 74%;
+  /* .simplebar-track.simplebar-vertical {
+    top: 40px;
+    bottom: 40px;
+    width: 2px;
+    right: 19px;
+    background-color: #000;
+  } */
+
+  .simplebar-scrollbar::before {
+    background-color: white;
+    opacity: 1;
+    }
+
+  .simplebar-track.simplebar-vertical {
+    width: 5px;
   }
 
-  .gallery {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    top: 40px;
+    bottom: 40px;
+    height: 20px;
+}
+
+  div.simplebar-scrollbar {
+    height: 20px;
   }
 
 
   </style>
-  <script src="js/tabs1.js" defer></script>
+  <script src="scroll.js" defer></script>
+
 </head>
 
 
+
 <body>
-  <section class="section__gallery section-offset">
-    <div class="container gallery">
-      <div class="gallery__left-block">
-        <h2 class="gallery__title container-title">
-          Галерея
-        </h2>
-        <span>Фильтр:</span>
-        <select name="select" id="choices-6" class="gallery__choice">
-          <option value="" class="select__gallery">Живопись</option>
-          <option class="select__item">Рисунок</option>
-          <option class="select__item">Скульптура</option>
-        </select>
 
-        <ul class="gallery__list-time">
-          <li class="gallery__item-time">
-            <button class="gallery__bnt-time btn-reset">
-              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.934326" width="11" height="11" stroke="white"/>
-              </svg>
-              <span class="gallery__bnt-span">
-                XIX век
-              </span>
-            </button>
-          </li>
-          <li class="gallery__item-time">
-            <button class="gallery__bnt-time btn-reset">
-              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.934326" width="11" height="11" stroke="white"/>
-              </svg>
-              <span class="gallery__bnt-span">
-                XX&nbsp;век
-              </span>
-            </button>
-          </li>
-          <li class="gallery__item-time">
-            <button class="gallery__bnt-time btn-reset">
-              <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="0.5" y="0.934326" width="11" height="11" stroke="white"/>
-              </svg>
-              <span class="gallery__bnt-span">
-                Современность
-              </span>
-            </button>
-          </li>
-        </ul>
+  <div class="container">
 
-      </div>
 
-      <div class="gallery__right-block">
+    <select name="" id="">реализм</select>
 
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/gallery/Rectangle 68.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="img/gallery/Rectangle 69.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="img/gallery/Rectangle 70.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="img/gallery/Rectangle 71.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="img/gallery/Rectangle 72.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="img/gallery/Rectangle 73.jpg" alt="">
-            </div>
+    <option class="">
+
+      <div class="scroll-content" data-simplebar>
+
+          <div slass="test-item test-item--1">
+            Тинторетто
+          </div>
+          <div slass="test-item test-item--2">
+            Фридрих
+          </div>
+          <div slass="test-item test-item--3">
+            Леонардо
+          </div>
+          <div slass="test-item test-item--4">
+            Верроккьо
+          </div>
+          <div slass="test-item">
+            Тинторетто
+          </div>
+          <div slass="test-item">
+            Фридрих
+          </div>
+          <div slass="test-item">
+            Леонардо
+          </div>
+          <div slass="test-item">
+            Верроккьо
           </div>
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
 
-
-        </div>
       </div>
-    </div>
-  </section>
+
+    </option>
+
+    <script>
+      new SimpleBar(document.querySelector('.scroll-contents'),
+       { autoHide: false });
+    </script>
+
+  </div>
+
 
 
 
 </body>
 </html>
+
+
+        <!-- <ul class="header__selest-list">
+          <li class="header__select-item">
+            <select name="select" id="choices-1" class="choices">
+              <option value="" class="select__item">Реализм</option>
+              <option class="select__item">Тинторетто</option>
+              <option class="select__item">Фридрих</option>
+              <option class="select__item">Леонардо</option>
+              <option class="select__item">Верроккьо</option>
+            </select>
+          </li>
+          <li class="header__select-item">
+            <select name="select" id="choices-2" class="choices">
+              <option value="" class="select__item">Импрессионизм</option>
+              <option class="select__item">Моне</option>
+              <option class="select__item">Сислей</option>
+              <option class="select__item">Мане</option>
+              <option class="select__item">Ренуар</option>
+            </select>
+          </li>
+          <li class="header__select-item">
+            <select name="select" id="choices-3" class="choices">
+              <option value="" class="select__item">Постимпрессионизм</option>
+              <option class="select__item">Ван Гог</option>
+              <option class="select__item">Сезанн</option>
+              <option class="select__item">Гоген</option>
+              <option class="select__item">Сёра</option>
+            </select>
+          </li>
+          <li class="header__select-item">
+            <select name="select" id="choices-4" class="choices">
+              <option value="" class="select__item">Авангард</option>
+              <option class="select__item">Кандинский</option>
+              <option class="select__item">Маринетти</option>
+              <option class="select__item">Малевич</option>
+              <option class="select__item">Пикассо</option>
+            </select>
+          </li>
+          <li class="header__select-item">
+            <select name="select" id="choices-5" class="choices">
+              <option value="" class="select__item">Футуризм</option>
+              <option class="select__item">Карра</option>
+              <option class="select__item">Прателла</option>
+              <option class="select__item">Северини</option>
+              <option class="select__item">Балла</option>
+            </select>
+          </li>
+        </ul> -->
+        <!-- <form action="/" class="header__form-search">
+          <button aria-label="кнопка поиска" class="header__btn-search btn-reset">
+            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+            </svg>
+          </button>
+          <input class="header__form-input" type="text" name="поиск" placeholder = "Поиск по&nbsp;сайту">
+        </form> -->
