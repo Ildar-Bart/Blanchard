@@ -201,9 +201,11 @@ function init(){
        center: [55.76001376535697,37.59988687036122],
        // Уровень масштабирования. Допустимые значения:
        // от 0 (весь мир) до 19.
-       zoom: 14
+       zoom: 14,
+       controls: ['zoomControl']
    });
 
+   myMap.behaviors.disable('scrollZoom');
    var myCircle = new ymaps.GeoObject({
        geometry: {
            type: "Circle",
@@ -216,3 +218,30 @@ function init(){
    myMap.geoObjects.add(myCircle);
 }
 
+// form валидация
+
+let phone = document.querySelector("input[type='tel']")
+var im = new Inputmask("+7 (999) 999-99-99")
+im.mask(phone);
+new window.JustValidate('.contacts__form', {
+    colorWrong: '#D11616',
+    rules: {
+      name: {
+        required: true
+      },
+      phone: {
+        required: true,
+        function: (name, value) => {
+          const ph = phone.inputmask.unmaskedvalue();
+          return Number(ph) && ph.length ===  10;
+        }
+    },
+    },
+  messages: {
+        name: "Вы не ввели имя",
+        phone: {
+          required: "Вы не ввели телефон",
+          function: "Не достаточно количество символов"
+        }
+      }
+    });

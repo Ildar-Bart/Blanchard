@@ -27,6 +27,10 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
+  <!-- валидация -->
+  <script src="https://rawcdn.githack.com/horprogs/Just-validate/7661936417e8aaad0e059291890c68a6bf473f6b/dist/js/just-validate.min.js"></script>
+  <script src="https://rawcdn.githack.com/RobinHerbots/Inputmask/a95afe64e7467eb14eb8aa8ccbfb6340a46fb8e3/dist/inputmask.min.js"></script>
+
   <!-- карта -->
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
   </script>
@@ -41,7 +45,6 @@
 </head>
 <body>
   <header class="header">
-
 
     <div class="header__top" id="header">
       <div class="container header__cap-top">
@@ -123,7 +126,6 @@
       </div>
     </div>
 
-
     <div class="header-cap-bottom">
 
       <div class="container hero-container">
@@ -142,9 +144,6 @@
         </a>
       </div>
     </div>
-
-
-
 
   </header>
 
@@ -737,49 +736,49 @@
           <div class="swiper-wrapper projects__swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide projects__swipper-clide">
-              <div class="projects__image-slide projects__image-slide--1">
-                <!-- <img src="img/projects/1 933.svg" alt="partner-logo" class="projects__img-slide"> -->
+              <div href="#" target="_blanc" class="projects__image-slides">
+                <a href="" class="projects__image-slide projects__image-slide--1"></a><!-- <img src="img/projects/1 933.svg" alt="partner-logo" class="projects__img-slide"> -->
               </div>
             </div>
             <div class="swiper-slide projects__swipper-clide">
-              <div class="projects__image-slide">
-                <img src="img/projects/Frame 66.svg" alt="">
-              </div>
+              <a href="#" target="_blanc" class="projects__image-slide projects__image-slide--2">
+                <!-- <img src="img/projects/Frame 66.svg" alt=""> -->
+              </a>
             </div>
             <div class="swiper-slide projects__swipper-clide">
-              <div class="projects__image-slide">
-                <img src="img/projects/Frame 67.svg" alt="">
-              </div>
+              <a href="#" target="_blanc" class="projects__image-slide projects__image-slide--3">
+                <!-- <img src="img/projects/Frame 67.svg" alt=""> -->
+              </a>
             </div>
             <div class="swiper-slide projects__swipper-clide">
-              <div class="projects__image-slide">
-                <img src="img/projects/Frame 22.svg" alt="">
-              </div>
+              <a href="#" target="_blanc" class="projects__image-slide projects__image-slide--4">
+                <!-- <img src="img/projects/Frame 22.svg" alt=""> -->
+              </a>
             </div>
             <div class="swiper-slide projects__swipper-clide">
-              <div class="projects__image-slide">
-                <img src="img/projects/Frame 25.svg" alt="">
-              </div>
+              <a href="#" target="_blanc" class="projects__image-slide projects__image-slide--5">
+                <!-- <img src="img/projects/Frame 25.svg" alt=""> -->
+              </a>
             </div>
             <div class="swiper-slide projects__swipper-clide">
-              <div class="projects__image-slide">
-                <img src="img/projects/Frame 23.svg" alt="">
-              </div>
+              <a href="#" target="_blanc" class="projects__image-slide projects__image-slide--6">
+                <!-- <img src="img/projects/Frame 23.svg" alt=""> -->
+              </a>
             </div>
             <div class="swiper-slide projects__swipper-clide">
-              <div class="projects__image-slide">
-                <img src="img/projects/Frame 26.svg" alt="">
-              </div>
+              <a href="#" target="_blanc" class="projects__image-slide projects__image-slide--7">
+                <!-- <img src="img/projects/Frame 26.svg" alt=""> -->
+              </a>
             </div>
             <div class="swiper-slide projects__swipper-clide">
-              <div class="projects__image-slide">
-                <img src="img/projects/Frame 24.svg" alt="">
-              </div>
+              <a href="#" target="_blanc" class="projects__image-slide projects__image-slide--8">
+                <!-- <img src="img/projects/Frame 24.svg" alt=""> -->
+              </a>
             </div>
             <div class="swiper-slide projects__swipper-clide">
-              <div class="projects__image-slide">
-                <img src="img/projects/Frame 27.svg" alt="">
-              </div>
+              <a href="#" target="_blanc" class="projects__image-slide projects__image-slide--9">
+                <!-- <img src="img/projects/Frame 27.svg" alt=""> -->
+              </a>
             </div>
           </div>
 
@@ -816,13 +815,17 @@
               Леонтьевский переулок, дом 5/1
             </address>
           </div>
-          <form action="" class="contacts__form">
-            <input type="text" name="Имя" placeholder="Имя*" class="contacts__form-input">
-            <input type="tel" name="Телефон" placeholder="Телефон*" class="contacts__form-input">
-            <button type="submit" class="contacts__form-btb btn-reset">
-              Заказать обратный звонок
-            </button>
+
+          <form action="#" class="contacts__form">
+            <div class="contacts__form-group">
+              <input type="text" class="contacts__form-input form-control" placeholder="Имя*" data-validate-field="name" name="name">
+            </div>
+            <div class="contacts__form-group">
+              <input type="tel" class="contacts__form-input form-control" placeholder="Телефон*" data-validate-field="phone" name="phone">
+            </div>
+            <button type="submit" class="contacts__form-btb">Заказать обратный звонок</button>
           </form>
+
           <div class="contacts__app">
             <span class="contacts__list-app-title">
               Связаться в&nbsp;один клик
@@ -852,6 +855,7 @@
               </li>
             </ul>
           </div>
+
         </div>
       </div>
     </section>

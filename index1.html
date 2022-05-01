@@ -8,96 +8,15 @@
 
   <!-- simplebar -->
 
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
-
-
-  <style>
-    .container {
-      max-width: 1200px;
-      padding: 100px;
-      margin: 0 auto;
-      font-size: 18px;
-      background-image: url('/img/hero/image-1.jpg');
-    }
-
-    /* scroll-content */
+ <!-- валидация -->
+ <script src="https://rawcdn.githack.com/horprogs/Just-validate/7661936417e8aaad0e059291890c68a6bf473f6b/dist/js/just-validate.min.js"></script>
+ <script src="https://rawcdn.githack.com/RobinHerbots/Inputmask/a95afe64e7467eb14eb8aa8ccbfb6340a46fb8e3/dist/inputmask.min.js"></script>
 
 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/form.js" defer></script>
 
-  .scroll-content {
-    width: 220px;
-    height: 200px;
-    padding: 40px;
-    background-color: rgba(0, 0, 0, 0.6);
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
-    color: #FFFFFF;
-  }
-
-  body > div > div > div.simplebar-wrapper > div.simplebar-mask > div > div > div > div {
-    max-width: 220px;
-    padding: 10px 14px 10px 14px;
-    background-size: cover;
-    width: 80%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  body > div > div > div.simplebar-wrapper > div.simplebar-mask > div > div > div > div:nth-child(1) {
-    background-image: url('img/hero/realism/Rectangle\ 57.jpg');
-
-  }
-
-  .test-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  body > div > div > div.simplebar-wrapper > div.simplebar-mask > div > div > div > div:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  .simplebar-track {
-    right: 19px;
-
-}
-
-  /* .simplebar-track.simplebar-vertical {
-    top: 40px;
-    bottom: 40px;
-    width: 2px;
-    right: 19px;
-    background-color: #000;
-  } */
-
-  .simplebar-scrollbar::before {
-    background-color: white;
-    opacity: 1;
-    }
-
-  .simplebar-track.simplebar-vertical {
-    width: 5px;
-  }
-
-  .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
-    top: 40px;
-    bottom: 40px;
-    height: 20px;
-}
-
-  div.simplebar-scrollbar {
-    height: 20px;
-  }
-
-
-  </style>
-  <script src="scroll.js" defer></script>
 
 </head>
 
@@ -105,52 +24,18 @@
 
 <body>
 
-  <div class="container">
-
-
-    <select name="" id="">реализм</select>
-
-    <option class="">
-
-      <div class="scroll-content" data-simplebar>
-
-          <div slass="test-item test-item--1">
-            Тинторетто
-          </div>
-          <div slass="test-item test-item--2">
-            Фридрих
-          </div>
-          <div slass="test-item test-item--3">
-            Леонардо
-          </div>
-          <div slass="test-item test-item--4">
-            Верроккьо
-          </div>
-          <div slass="test-item">
-            Тинторетто
-          </div>
-          <div slass="test-item">
-            Фридрих
-          </div>
-          <div slass="test-item">
-            Леонардо
-          </div>
-          <div slass="test-item">
-            Верроккьо
-          </div>
-
-
-      </div>
-
-    </option>
-
-    <script>
-      new SimpleBar(document.querySelector('.scroll-contents'),
-       { autoHide: false });
-    </script>
-
-  </div>
-
+  <form action="#" class="block-form">
+    <div class="form-group">
+      <input type="text" class="form__input form-control" placeholder="Имя*" autocomplete="off" data-validate-field="name" name="name">
+    </div>
+    <div class="form-group">
+      <input type="tel" class="form__input form-control" placeholder="Телефон*" autocomplete="off" data-validate-field="phone" name="phone">
+    </div>
+    <div class="form-group form-group-3">
+      <input type="email" class="form__input form-control" placeholder="Почта*" autocomplete="off" data-validate-field="email" name="email" id="email">
+    </div>
+    <button type="submit" class="form-btn">Заказать</button>
+  </form>
 
 
 
@@ -158,59 +43,3 @@
 </html>
 
 
-        <!-- <ul class="header__selest-list">
-          <li class="header__select-item">
-            <select name="select" id="choices-1" class="choices">
-              <option value="" class="select__item">Реализм</option>
-              <option class="select__item">Тинторетто</option>
-              <option class="select__item">Фридрих</option>
-              <option class="select__item">Леонардо</option>
-              <option class="select__item">Верроккьо</option>
-            </select>
-          </li>
-          <li class="header__select-item">
-            <select name="select" id="choices-2" class="choices">
-              <option value="" class="select__item">Импрессионизм</option>
-              <option class="select__item">Моне</option>
-              <option class="select__item">Сислей</option>
-              <option class="select__item">Мане</option>
-              <option class="select__item">Ренуар</option>
-            </select>
-          </li>
-          <li class="header__select-item">
-            <select name="select" id="choices-3" class="choices">
-              <option value="" class="select__item">Постимпрессионизм</option>
-              <option class="select__item">Ван Гог</option>
-              <option class="select__item">Сезанн</option>
-              <option class="select__item">Гоген</option>
-              <option class="select__item">Сёра</option>
-            </select>
-          </li>
-          <li class="header__select-item">
-            <select name="select" id="choices-4" class="choices">
-              <option value="" class="select__item">Авангард</option>
-              <option class="select__item">Кандинский</option>
-              <option class="select__item">Маринетти</option>
-              <option class="select__item">Малевич</option>
-              <option class="select__item">Пикассо</option>
-            </select>
-          </li>
-          <li class="header__select-item">
-            <select name="select" id="choices-5" class="choices">
-              <option value="" class="select__item">Футуризм</option>
-              <option class="select__item">Карра</option>
-              <option class="select__item">Прателла</option>
-              <option class="select__item">Северини</option>
-              <option class="select__item">Балла</option>
-            </select>
-          </li>
-        </ul> -->
-        <!-- <form action="/" class="header__form-search">
-          <button aria-label="кнопка поиска" class="header__btn-search btn-reset">
-            <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
-            </svg>
-          </button>
-          <input class="header__form-input" type="text" name="поиск" placeholder = "Поиск по&nbsp;сайту">
-        </form> -->
