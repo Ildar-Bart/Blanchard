@@ -923,14 +923,12 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted {
   color: var(--color-like-black);
 }
 
-
 .events__article-item-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
   color: var(--color-like-black);
 }
-
 
 .events__article-item-link {
   position: absolute;
@@ -944,6 +942,16 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted {
   padding-bottom: 3px;
 }
 
+.events__article-item-link:hover {
+  color: var(--color-focus-active);
+  border-color: var(--color-focus-active);
+}
+
+.events__article-item-link:active {
+  color: var(--color-like-black);
+  border-color: var(--color-like-black);
+}
+
 .events__swipper {
   padding-left: 1px;
 }
@@ -951,6 +959,7 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted {
 .events__swiper-slide {
   max-width: 500px;
 }
+
 
 .swiper-button-prev-event, .swiper-rtl .swiper-button-prev-event {
   left: 0;
@@ -975,6 +984,14 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted {
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color,var(--swiper-theme-color));
+}
+
+.swiper-button-prev-event {
+  display: none;
+}
+
+.swiper-button-next-event:active + .swiper-button-prev-event {
+  display: block;
 }
 
 /* projects*/
@@ -1003,7 +1020,7 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted {
 
 /* toolpit in projects start*/
 
-.toolpit__btn {
+.projects__toolpit-btn {
   width: 16px;
   height: 16px;
   border: 1px solid var(--color-toolpit);
@@ -1011,6 +1028,25 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted {
   font-size: 12px;
   background-color: transparent;
   cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  transition-property: background-color, color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.projects__toolpit-btn:focus-visible {
+  outline: none;
+}
+
+.projects__toolpit-btn:focus-visible,
+.projects__toolpit-btn:hover {
+  background-color: #91a9F0;
+}
+
+.projects__toolpit-btn:active {
+  background-color: var(--color-toolpit);
+  color: var(--color-white);
 }
 
 .tippy-box[data-theme~='amethyst'] {
@@ -1038,11 +1074,6 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted {
   border-right-color: var(--color-toolpit);
 }
 
-.toolpit__btn:hover {
-  background-color: var(--color-toolpit);
-  color: var(--color-white);
-}
-
 .tippy-content {
   padding: 0;
 }
@@ -1067,26 +1098,45 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted {
 }
 
 .projects__descr-link-text {
+  padding-left: 1px;
+  padding-right: 1px;
+  color: var(--color-toolpit);
+  transition-property: background-color, color, border-bottom;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.projects__descr-link-text:focus-visible {
+  outline: none;
+  background-color: var(--color-toolpit);
+  color: var(--color-white);
+}
+
+.projects__descr-link-text:hover {
+  border-bottom: 1px solid var(--color-toolpit);
+  background-color: transparent;
   color: var(--color-toolpit);
 }
 
+.projects__descr-link-text:active {
+  border-bottom: 1px solid var(--color-focus-active);
+  background-color: transparent;
+  color: var(--color-focus-active);
+}
+
+
 /* стилизация слайдера start */
 
-.projects__image-slides {
+.projects__image-slide {
+  position: relative;
   width: 450px;
   height: 150px;
   border: 1px solid #CACACA;
   margin: auto auto;
 }
 
-
-.projects__image-slide {
-  position: relative;
-
-}
-
 .projects__image-slide:before {
-  content: "sdvd";
+  content: "";
   position: absolute;
   top: 50%;
   right: 50%;
@@ -1096,13 +1146,23 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted {
   background-size: contain;
   width: 54%;
   height: 50%;
-  transition-property: background-image;
+  transition-property: background-image, border-color;
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
 }
 
+.projects__image-slide:focus-visible {
+  outline: none;
+  border-color: var(--color-toolpit);
+}
+
+.projects__image-slide:hover {
+  outline: none;
+  border-color: #CACACA;
+}
+
 .projects__image-slide--1::before {
-  background-image: url('/img/projects/Frame\ 25.svg');
+  background-image: url('/img/projects/color/project-b-1.jpg');
 }
 
 .projects__image-slide--1:hover::before,
@@ -1184,11 +1244,6 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted {
 
 .projects__image-slide:active {
   border-color: var(--color-toolpit);
-}
-
-
-.projects__image-slide img {
-  max-width: 100%;
 }
 
 body > main > section.section-projects.section-offset > div > div {

@@ -17,6 +17,37 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/form.js" defer></script>
 
+  <style>
+    .projects__image-slides {
+  position: relative;
+  width: 450px;
+  height: 150px;
+  border: 1px solid #CACACA;
+  margin: auto auto;
+}
+
+.projects__image-slide:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 54%;
+  height: 50%;
+  transition-property: background-image;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.projects__image-slide--1::before {
+  background-image: url('/img/projects/Frame\ 25.svg');
+}
+
+  </style>
+
 
 </head>
 
@@ -24,18 +55,9 @@
 
 <body>
 
-  <form action="#" class="block-form">
-    <div class="form-group">
-      <input type="text" class="form__input form-control" placeholder="Имя*" autocomplete="off" data-validate-field="name" name="name">
-    </div>
-    <div class="form-group">
-      <input type="tel" class="form__input form-control" placeholder="Телефон*" autocomplete="off" data-validate-field="phone" name="phone">
-    </div>
-    <div class="form-group form-group-3">
-      <input type="email" class="form__input form-control" placeholder="Почта*" autocomplete="off" data-validate-field="email" name="email" id="email">
-    </div>
-    <button type="submit" class="form-btn">Заказать</button>
-  </form>
+  <a href="">
+    <div class="projects__image-slide projects__image-slide--1"></div>
+  </a>
 
 
 
