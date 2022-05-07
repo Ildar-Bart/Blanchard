@@ -134,7 +134,7 @@ ul {
 }
 
 .header .swiper {
-  height: 800px;
+  /* height: 800px; */
   position: absolute;
   top: 0;
   left: 0;
@@ -146,6 +146,7 @@ ul {
 .header__swiper-slide img {
   background-repeat: no-repeat;
   width: 100%;
+  height: 100%;
   background-position: center;
   background-size: cover;
 }
@@ -1179,6 +1180,7 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted:hover {
 
 .catalog__tabs-nav-item-paintes {
   margin-right: 62px;
+  max-width: 800px;
 }
 
 .catalog__tabs-nav-item-btn {
@@ -1289,8 +1291,8 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted:hover {
 
 .events__article-item-descr {
   position: relative;
-  padding: 13px 50px 45px 50px;
-  min-height: 341px;
+  padding: 13px 50px 65px 50px;
+  min-height: 321px;
   border: 1px solid #CACACA;
   border-top: none;
 }
@@ -1321,9 +1323,13 @@ margin-bottom: 3px;
   font-size: 16px;
   line-height: 32px;
   color: var(--color-like-black);
+  margin-top: auto;
 }
 
 .events__article-item-link {
+
+
+
   position: absolute;
   left: 50px;
   bottom: 42px;
@@ -1362,6 +1368,7 @@ div.events.swipper {
 
 .events__swiper-slide {
   max-width: 500px;
+  display: flex;
 }
 
 .swiper-button-prev-event, .swiper-rtl .swiper-button-prev-event {
@@ -1553,7 +1560,7 @@ div.events.swipper {
 
 .projects__image-slide {
   position: relative;
-  width: 450px;
+  max-width: 450px;
   height: 150px;
   border: 1px solid #CACACA;
   margin: auto auto;
@@ -1754,22 +1761,27 @@ body > main > section.section-projects.section-offset > div > div {
 .contacts__block-top {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
 }
 
+.contacts__adress {
+  padding-top: 7px;
+}
+
 .contacts__app {
+  padding-top: 3px;
   display: flex;
   flex-direction: column;
 }
 
 .contacts__list-app {
+
   display: flex;
   flex-direction: row;
 }
 
 .contacts__adress-1 {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -1785,14 +1797,14 @@ body > main > section.section-projects.section-offset > div > div {
   color: var(--color-like-black);
 }
 
-
 /* кастомный form */
 
 .contacts__form {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   position: relative;
-  padding-top: 5px;
+  padding-top: 17px;
 }
 
 .contacts__form-group {
@@ -1806,6 +1818,8 @@ body > main > section.section-projects.section-offset > div > div {
 
 .contacts__form-input {
   width: 270px;
+  height: 50px;
+  margin-bottom: 20px;
   border: 1px solid var(--color-like-black);
   border-radius: 100px;
   padding: 8px 32px 8px 23px;
@@ -1816,6 +1830,7 @@ body > main > section.section-projects.section-offset > div > div {
   transition-property: background-color;
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
+
 }
 
 .js-validate-error-label {
@@ -1843,8 +1858,11 @@ body > main > section.section-projects.section-offset > div > div {
 }
 
 .contacts__form-btb {
+  width: 327px;
+  height: 50px;
+  /* width: 100%; */
   cursor: pointer;
-  padding: 10.5px 33px;
+  padding: 10.5px 10px;
   border: 2px solid #9D5CD0;
   border-radius: 100px;
   font-weight: 700;
@@ -1886,7 +1904,7 @@ body > main > section.section-projects.section-offset > div > div {
 }
 
 .contacts__list-app-title {
-  margin-bottom: 7px;
+  margin-bottom: 6px;
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
