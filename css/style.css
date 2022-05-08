@@ -925,7 +925,7 @@ div.choices__list--dropdown .choices__item--selectable.is-highlighted:hover {
   cursor: not-allowed;
 }
 
-.gallery__swiper-slide--img {
+.gallery__swiper-slide-img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -1718,8 +1718,7 @@ body > main > section.section-projects.section-offset > div > div {
   border: 2px solid #ECECEC;
   background-color: #ECECEC;
   border-radius: 100%;
-  transform: border-color .3s ease-in-out;
-  transition-property: background-color, fill;
+  transition-property: border-color, background-color, fill;
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
 }
@@ -1766,16 +1765,19 @@ body > main > section.section-projects.section-offset > div > div {
 
 .contacts__adress {
   padding-top: 7px;
+  /* margin-right: 20px; */
+  width: 17.9%;
 }
 
 .contacts__app {
+  width: 18%;
+  /* margin-left: 18px; */
   padding-top: 3px;
   display: flex;
   flex-direction: column;
 }
 
 .contacts__list-app {
-
   display: flex;
   flex-direction: row;
 }
@@ -1800,6 +1802,7 @@ body > main > section.section-projects.section-offset > div > div {
 /* кастомный form */
 
 .contacts__form {
+  width: 58%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

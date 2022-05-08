@@ -1,5 +1,21 @@
 @media (max-width: 1660px) {
+
+  .header__cap-top-logo {
+    margin-right: auto;
+  }
+
+  .header__cap-middle-list-item:not(:last-child) {
+    margin-right: 50px;
+  }
+
   .catalog__tabs-nav-painttes-list {
     height: 434px;
   }
+
+  .events__article-item-descr {
+    min-height: 400px;
+  }
+
 }
+
+
