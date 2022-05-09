@@ -1,18 +1,18 @@
 // кнопки для секции header__cap-middle
 
 document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll(".header__cap-middle-list-btn").forEach(item => {
+  document.querySelectorAll(".header__middle-list-btn").forEach(item => {
   item.addEventListener("click", function() {
     let btn = this;
-    let dropdown = this.parentElement.querySelector(".dropdown");
+    let dropdown = this.parentElement.querySelector(".header__dropdown");
 
-    document.querySelectorAll(".header__cap-middle-list-btn").forEach(el => {
+    document.querySelectorAll(".header__middle-list-btn").forEach(el => {
       if (el != btn) {
         el.classList.remove("active-btn");
       }
     });
 
-    document.querySelectorAll(".dropdown").forEach(el => {
+    document.querySelectorAll(".header__dropdown").forEach(el => {
       if (el != dropdown) {
         el.classList.remove("active-dropdown");
       }
@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("click", function(e) {
   let target = e.target;
-  if (!target.closest(".header__cap-middle-list")) {
-    document.querySelectorAll(".dropdown").forEach(el => {
+  if (!target.closest(".header__middle-list")) {
+    document.querySelectorAll(".header__dropdown").forEach(el => {
         el.classList.remove("active-dropdown");
     })
-     document.querySelectorAll(".header__cap-middle-list-btn").forEach(el => {
+     document.querySelectorAll(".header__middle-list-btn").forEach(el => {
         el.classList.remove("active-btn");
     });
   }
@@ -139,13 +139,15 @@ let galleryswiper = new Swiper('.gallery__swiper', {
 
     576: {
       slidesPerView: 2,
-      spaceBetween: 30
+      spaceBetween: 34,
+      slidesPerGroup: 2,
     },
 
-    1200: {
+    1440: {
       slidesPerView: 3,
-      spaceBetween: 50
-    }
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    },
   },
 
  });
@@ -284,6 +286,12 @@ let progectsswipper = new Swiper('.projects__swipper', {
   // курсор перетаскивания
   grabCursor: true,
 
+  // centerInsufficientSlides: true,
+  // centeredSlides: true,
+  // // centeredSlidesBounds: true,
+
+
+
   //переключение при клине на слой
   slideToClickedSlide: true,
 
@@ -326,12 +334,24 @@ let progectsswipper = new Swiper('.projects__swipper', {
   // width: 1450,
 
   //Брейк поинт, ширина экрана
-  // breakpoints: {
-  //     // when window width is >= 320px
-  //     320: {
-  //       slidesPerView: 1,
-  //       spaceBetween: 20
-  //     },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+      slidesPerGroup: 2,
+    },
+
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    },
+  },
 });
 
 
@@ -409,3 +429,19 @@ document.querySelectorAll('.catalog__tabs-nav-item-btn').forEach(function(tabsBt
   document.querySelector(`[data-target="${path}"]`).classList.add('catalog__tabs-item--active');
   });
 });
+
+
+// document.querySelector(".gallery__swiper-slide").addEventListener("click", function() {
+//   document.querySelector(".modal-all").classList.add("active");
+// })
+
+
+
+let buttons = document.querySelector('.gallery__swiper-slide');
+
+buttons.addEventListener("click", function() {
+  document.querySelector(".modal-all").classList.add("active");})
+
+document.querySelector(".gallery__big-image-close").addEventListener("click", function() {
+  document.querySelector(".modal-all").classList.remove("active");
+  })
