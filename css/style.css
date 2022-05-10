@@ -912,6 +912,7 @@ div.header_choices:hover {
   width: 100%;
   overflow: hidden;
 }
+
 .gallery__swiper .gallery__swiper-wrapper {
   height: 350px;
 }
@@ -938,14 +939,10 @@ div.header_choices:hover {
   right: 0px;
   left: 0px;
   background-color: rgba(194, 131, 243, 0.4);
-
-
   opacity: 0;
-
-  transition-property:, opacity;
+  transition-property: opacity;
   transition: .3s ease-in-out;
 }
-
 
 
 .gallery__swiper-slide:before {
@@ -1013,6 +1010,7 @@ div.header_choices:hover {
 .swiper-btn--prev-gal {
   margin-right: 9px;
 }
+
 .gallery__swiper .gallery__swiper-pagination {
   margin-right: 10px;
 }
@@ -1125,7 +1123,7 @@ div.header_choices:hover {
 }
 
 .catalog__tabs-item-common-text-title {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
@@ -1264,7 +1262,7 @@ div.header_choices:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 20px 0;
+  padding: 29px 0;
 }
 
 .catalog__tabs-nav-painttes-list {
@@ -1277,7 +1275,6 @@ div.header_choices:hover {
 
 .catalog__tabs-nav-item-paintes {
   margin-right: 62px;
-
 }
 
 .catalog__tabs-nav-item-btn {
@@ -1328,7 +1325,7 @@ div.header_choices:hover {
 
 .catalog__accordion-bottom-box {
   margin: 10px;
-  margin-right: 34px;
+  margin-right: 38px;
   width: 251px;
   height: 165px;
   background: #B7B7B7;
