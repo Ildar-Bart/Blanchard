@@ -12,7 +12,6 @@ html {
 	font-style: normal;
 }
 
-
 @font-face {
 	font-family: 'Open Sans';
 	src: local('Open Sans Light'), local('OpenSans-Light'),
@@ -21,7 +20,6 @@ html {
 	font-weight: 300;
 	font-style: normal;
 }
-
 
 @font-face {
 	font-family: 'Open Sans';
@@ -151,42 +149,54 @@ ul {
   background-size: cover;
 }
 
-.header__top {
+.header__cap-top {
   background-color: var(--color-black);
   z-index: 1;
 }
 
-.header__cap-top {
-  position: relative;
+.header__btn-search,
+.header__btn-close,
+.header__btn-open {
+  display: none;
 }
 
 .header__item-link {
   color: var(--color-white);
 }
 
-.header__cap-top {
+.header__top {
+
   padding-top: 30px;
   padding-bottom: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
-.header__cap-top-logo {
+.header__top-logo {
   margin-right: 175px;
 }
 
-.header__cap-top-item:not(:last-child) {
+.header__top-item:not(:last-child) {
   margin-right: 54.5px;
 }
 
-.header__cap-top-list {
+.header__top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 78.2%;
+
+}
+
+.header__top-list {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.header__cap-top-item-link {
+.header__top-item-link {
   padding: 1px 4px;
   font-weight: 600;
   font-size: 18px;
@@ -200,6 +210,9 @@ ul {
 }
 
 .header__link-personal-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: relative;
   margin-right: -6px;
   margin-left: auto;
@@ -210,7 +223,7 @@ ul {
 }
 
 .header__link-personal-area svg {
-  margin-right: 1px;
+  margin-right: 7px;
 }
 
 .header__link-personal-area path {
@@ -222,23 +235,23 @@ ul {
   font-size: 18px;
   line-height: 25px;
   text-align: center;
-  color: #FFFFFF;
+  color: var(--color-white);
   transition-property: color, background-color, outline;
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
 }
 
-.header__cap-top-item-link:focus-visible {
+.header__top-item-link:focus-visible {
   background-color: var(--color-focus-active);
   outline: none;
 }
 
-.header__cap-top-item-link:hover {
+.header__top-item-link:hover {
   color: var(--color-hover);
   background-color: transparent;
 }
 
-.header__cap-top-item-link:active {
+.header__top-item-link:active {
   color: var(--color-focus-active);
 }
 
@@ -267,13 +280,30 @@ ul {
   fill: var(--color-toolpit);
 }
 
+.header__form {
+  display: flex;
+  align-items: center;
+  padding: 2px 6.5px 12px 5px;
+
+  position: absolute;
+  z-index: 2;
+  top: 7.2%;
+  right: 4.7%;
+  transform: translate(100%, -50%);
+  background-color: var(--color-black);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .3s ease-in-out, opacity .3s ease-in-out .2s,
+    visibility .3s ease-in-out .2s;
+}
+
 /*header__cap-middle*/
 
-.header__middle {
+.header__cap-middle {
   background: rgba(0, 0, 0, 0.4);
 }
 
-.header__middle-container {
+.header__middle {
   padding-top: 22px;
   padding-bottom: 21px;
   /* height: 70px; */
@@ -886,9 +916,37 @@ div.header_choices:hover {
   height: 350px;
 }
 
+
 .gallery__swiper-slide {
   position: relative;
 }
+
+.gallery__swiper-slide-img {
+  transition-property:  outline-color, outline;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+  outline: 3px solid transparent;
+  outline-offset: -3px;
+}
+
+
+.gallery__swiper-slide::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  background-color: rgba(194, 131, 243, 0.4);
+
+
+  opacity: 0;
+
+  transition-property:, opacity;
+  transition: .3s ease-in-out;
+}
+
+
 
 .gallery__swiper-slide:before {
   content: "";
@@ -910,8 +968,29 @@ div.header_choices:hover {
   transition: .3s ease-in-out;
 }
 
+.gallery__swiper-slide:focus-visible {
+  outline: none;
+}
+
+.gallery__swiper-slide:focus-visible img {
+  outline-color: var(--color-focus-active);
+}
+
+.gallery__swiper-slide:hover img {
+  outline: none;
+}
+
 .gallery__swiper-slide:hover:before {
   z-index: 1;
+  opacity: 1;
+}
+
+.gallery__swiper-slide:active img {
+  outline: 2px solid #D1A9F0;
+  outline-offset: -2px;
+}
+
+.gallery__swiper-slide:active:after {
   opacity: 1;
 }
 

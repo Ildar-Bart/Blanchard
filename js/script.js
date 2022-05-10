@@ -219,6 +219,25 @@ let eventsswipper = new Swiper('.events__swipper', {
  // скрость
  speed: 500,
 
+ breakpoints: {
+  320: {
+    slidesPerView: 1,
+    spaceBetween: 0
+  },
+
+  576: {
+    slidesPerView: 3,
+    spaceBetween: 27,
+    slidesPerGroup: 1,
+  },
+
+  1440: {
+    slidesPerView: 3,
+    spaceBetween: 50,
+    slidesPerGroup: 1,
+  },
+},
+
 });
 
 
@@ -290,8 +309,6 @@ let progectsswipper = new Swiper('.projects__swipper', {
   // centeredSlides: true,
   // // centeredSlidesBounds: true,
 
-
-
   //переключение при клине на слой
   slideToClickedSlide: true,
 
@@ -306,17 +323,17 @@ let progectsswipper = new Swiper('.projects__swipper', {
   },
 
   // Управление колесом мыши
-  mousewheel: {
-    invert: true,
-    // чувствительность колеса мыши
-    sensitivity: 1,
-  },
+  // mousewheel: {
+  //   invert: true,
+  //   // чувствительность колеса мыши
+  //   sensitivity: 1,
+  // },
 
   // количество слайдов для показа
   slidesPerView: 3,
   // slidesPerView: "auto",
 
-  // отключение функцтонала, если слайдов меньше чем нужно
+  // отключение функционала, если слайдов меньше чем нужно
   watchOverflow: true,
 
   // количество пролистываемых слайдов
@@ -437,11 +454,13 @@ document.querySelectorAll('.catalog__tabs-nav-item-btn').forEach(function(tabsBt
 
 
 
-let buttons = document.querySelector('.gallery__swiper-slide');
+// let buttons = document.querySelector('.gallery__swiper-slide');
 
-buttons.addEventListener("click", function() {
-  document.querySelector(".modal-all").classList.add("active");})
+// buttons.addEventListener("click", function() {
+//   document.querySelector(".modal-all").classList.add("active");})
 
-document.querySelector(".gallery__big-image-close").addEventListener("click", function() {
-  document.querySelector(".modal-all").classList.remove("active");
-  })
+// document.querySelector(".gallery__big-image-close").addEventListener("click", function() {
+//   document.querySelector(".modal-all").classList.remove("active");
+//   })
+
+
