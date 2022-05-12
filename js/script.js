@@ -1,42 +1,91 @@
 // кнопки для секции header__cap-middle
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll(".header__middle-list-btn").forEach(item => {
-  item.addEventListener("click", function() {
-    let btn = this;
-    let dropdown = this.parentElement.querySelector(".header__dropdown");
+const params = {
+  btnClassName: "js-header-dropdown-btn",
+  dropClassName: "js-header-drop",
+  activeClassName: "is-active",
+  disabledClassName: "is-disabled"
+}
 
-    document.querySelectorAll(".header__middle-list-btn").forEach(el => {
-      if (el != btn) {
-        el.classList.remove("active-btn");
+function onDisable(evt) {
+  if (evt.target.classList.contains(params.disabledClassName)) {
+    evt.target.classList.remove(params.disabledClassName, params.activeClassName);
+    evt.target.removeEventListener("animationend", onDisable);
+  }
+}
+
+  function setMenuListener() {
+    document.body.addEventListener("click", (evt) => {
+      const activeElements = document.querySelectorAll(`.${params.btnClassName}.${params.activeClassName}, .${params.dropClassName}.${params.activeClassName}`);
+
+      if (activeElements.length && !evt.target.closest(`.${params.activeClassName}`)) {
+        activeElements.forEach((current) => {
+          if (current.classList.contains(params.btnClassName)) {
+            current.classList.remove(params.activeClassName);
+          } else {
+            current.classList.add(params.disabledClassName);
+          }
+        });
       }
-    });
 
-    document.querySelectorAll(".header__dropdown").forEach(el => {
-      if (el != dropdown) {
-        el.classList.remove("active-dropdown");
+      if (evt.target.closest(`.${params.btnClassName}`)) {
+        const btn = evt.target.closest(`.${params.btnClassName}`);
+        const path = btn.dataset.path;
+        const drop = document.querySelector(`.${params.dropClassName}[data-target="${path}"]`);
+
+        btn.classList.toggle(params.activeClassName);
+
+        if (!drop.classList.contains(params.activeClassName)) {
+          drop.classList.add(params.activeClassName);
+          drop.addEventListener("animationend", onDisable);
+        } else {
+          drop.classList.add(params.disabledClassName);
+        }
       }
-    })
-    dropdown.classList.toggle("active-dropdown");
-    btn.classList.toggle("active-btn")
-  })
-})
-
-document.addEventListener("click", function(e) {
-  let target = e.target;
-  if (!target.closest(".header__middle-list")) {
-    document.querySelectorAll(".header__dropdown").forEach(el => {
-        el.classList.remove("active-dropdown");
-    })
-     document.querySelectorAll(".header__middle-list-btn").forEach(el => {
-        el.classList.remove("active-btn");
     });
   }
-})
-})
+
+setMenuListener();
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   document.querySelectorAll(".header__middle-list-btn").forEach(item => {
+//   item.addEventListener("click", function() {
+//     let btn = this;
+//     let dropdown = this.parentElement.querySelector(".header__dropdown");
+
+//     document.querySelectorAll(".header__middle-list-btn").forEach(el => {
+//       if (el != btn) {
+//         el.classList.remove("active-btn");
+//       }
+//     });
+
+//     document.querySelectorAll(".header__dropdown").forEach(el => {
+//       if (el != dropdown) {
+//         el.classList.remove("active-dropdown");
+//       }
+//     })
+//     dropdown.classList.toggle("active-dropdown");
+//     btn.classList.toggle("active-btn")
+//   })
+// })
+
+// document.addEventListener("click", function(e) {
+//   let target = e.target;
+//   if (!target.closest(".header__middle-list")) {
+//     document.querySelectorAll(".header__dropdown").forEach(el => {
+//         el.classList.remove("active-dropdown");
+//     })
+//      document.querySelectorAll(".header__middle-list-btn").forEach(el => {
+//         el.classList.remove("active-btn");
+//     });
+//   }
+// })
+// })
+
 
 // слайдер в секции header
-let headerswiper = new Swiper('.header__swiper', {
+let headerswiper = new Swiper('.js-hero-swiper', {
   // Optional parameters
   // direction: 'vertical',
   slidesPerView: 1,
@@ -85,8 +134,8 @@ let galleryswiper = new Swiper('.gallery__swiper', {
     type: "fraction"
   },
   navigation: {
-    nextEl: ".swiper-btn--next-gal",
-    prevEl: ".swiper-btn--prev-gal"
+    nextEl: ".swiper-btn-next-gal",
+    prevEl: ".swiper-btn-prev-gal"
   },
 
   // курсор перетаскивания
@@ -156,20 +205,27 @@ let galleryswiper = new Swiper('.gallery__swiper', {
 
 // аккардион
 $( function() {
-  $( ".catalog__accordion-list-year" ).accordion({
-   icons: false,
-   heightStyle: "content",
-   collapsible: true,
-   active: false
- });
+  $( ".catalog__accordion" ).accordion({
+    icons: false,
+    heightStyle: "content",
+    collapsible: true,
+    active: false
+  });
 
 } );
 
 // слайдер в секции события
 
 let eventsswipper = new Swiper('.events__swipper', {
- // отступ между слайдами
- spaceBetween: 50,
+  // отступ между слайдами
+  spaceBetween: 50,
+
+
+  pagination: {
+    el: ".events__swiper-pagination",
+    type: 'bullets',
+  },
+
 
   // Navigation arrows (стрелки)
  navigation: {
@@ -205,10 +261,10 @@ let eventsswipper = new Swiper('.events__swipper', {
  // slidesPerView: "auto",
 
  // отключение функционала, если слайдов меньше чем нужно
- watchOverflow: true,
+//  watchOverflow: true,
 
  // количество пролистываемых слайдов
- slidesPerGroup: 1,
+ slidesPerGroup: 3,
 
  // бесконечный слайдер
 //  loop: true,
@@ -228,13 +284,13 @@ let eventsswipper = new Swiper('.events__swipper', {
   576: {
     slidesPerView: 3,
     spaceBetween: 27,
-    slidesPerGroup: 1,
+    slidesPerGroup: 3,
   },
 
   1440: {
     slidesPerView: 3,
     spaceBetween: 50,
-    slidesPerGroup: 1,
+    slidesPerGroup: 3,
   },
 },
 
@@ -296,22 +352,18 @@ tippy('#myButton-3', {
 let progectsswipper = new Swiper('.projects__swipper', {
   // отступ между слайдами
   spaceBetween: 50,
-
   // Navigation arrows (стрелки)
   navigation: {
-    nextEl: '.swiper-button-next-my',
-    prevEl: '.swiper-button-prev-my',
+    nextEl: '.swiper-button-next-proj',
+    prevEl: '.swiper-button-prev-proj',
   },
   // курсор перетаскивания
   grabCursor: true,
-
   // centerInsufficientSlides: true,
   // centeredSlides: true,
   // // centeredSlidesBounds: true,
-
   //переключение при клине на слой
   slideToClickedSlide: true,
-
   // управление клавиатурой
   keyboard: {
     // Включить\выключить
