@@ -146,7 +146,7 @@ let galleryswiper = new Swiper('.gallery__swiper', {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 0,
+      spaceBetween: 25,
       slidesPerGroup: 1,
     },
 
@@ -198,131 +198,101 @@ let eventsswipper = new Swiper('.events__swipper', {
 
 
   // Navigation arrows (стрелки)
- navigation: {
-   nextEl: '.swiper-button-next-event',
-   prevEl: '.swiper-button-prev-event',
- },
-
- // курсор перетаскивания
- grabCursor: true,
-
- //переключение при клине на слой
- slideToClickedSlide: true,
-
- // управление клавиатурой
- keyboard: {
-   // Включить\выключить
-   enabled: true,
-   // Включить\выключить только когда слайдер в пределахвьюпорта
-   onlyInViewport: true,
-   // Включить\выключить с помощью клавиш Page Up и Page Down.
-   pageUpDown: true
- },
-
- // // Управление колесом мыши
- // mousewheel: {
- //   invert: true,
- //   // чувствительность колеса мыши
- //   sensitivity: 1,
- // },
-
- // количество слайдов для показа
- slidesPerView: 1,
- // slidesPerView: "auto",
-
- // отключение функционала, если слайдов меньше чем нужно
-//  watchOverflow: true,
-
- // количество пролистываемых слайдов
- slidesPerGroup: 1,
-
- // бесконечный слайдер
-//  loop: true,
-
- // свободный режим
- // freeMode: true,
-
- // скрость
- speed: 500,
-
- breakpoints: {
-  320: {
-    slidesPerView: 1,
-    spaceBetween: 0
+  navigation: {
+    nextEl: '.swiper-button-next-event',
+    prevEl: '.swiper-button-prev-event',
   },
 
-  576: {
-    slidesPerView: 2,
-    spaceBetween: 34,
-    slidesPerGroup: 2,
+  // курсор перетаскивания
+  grabCursor: true,
+
+  //переключение при клине на слой
+  slideToClickedSlide: true,
+
+  // управление клавиатурой
+  keyboard: {
+    // Включить\выключить
+    enabled: true,
+    // Включить\выключить только когда слайдер в пределахвьюпорта
+    onlyInViewport: true,
+    // Включить\выключить с помощью клавиш Page Up и Page Down.
+    pageUpDown: true
   },
 
-  992: {
-    slidesPerView: 3,
-    spaceBetween: 27,
-    slidesPerGroup: 3,
+  // // Управление колесом мыши
+  // mousewheel: {
+  //   invert: true,
+  //   // чувствительность колеса мыши
+  //   sensitivity: 1,
+  // },
+
+  // количество слайдов для показа
+  slidesPerView: 1,
+  // slidesPerView: "auto",
+
+  // отключение функционала, если слайдов меньше чем нужно
+  //  watchOverflow: true,
+
+  // количество пролистываемых слайдов
+  slidesPerGroup: 1,
+
+  // бесконечный слайдер
+  //  loop: true,
+
+  // свободный режим
+  // freeMode: true,
+
+  // скрость
+  speed: 500,
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      slidesPerGroup: 1,
+    },
+
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 34,
+      slidesPerGroup: 2,
+    },
+
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 27,
+      slidesPerGroup: 3,
+    },
+
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    }
   },
-
-  1440: {
-    slidesPerView: 3,
-    spaceBetween: 50,
-    slidesPerGroup: 3,
-  }
-
-},
-
 });
 
 
-// тодпиты в секции проект
+// толпиты в секции проект
 // toolpit на библиотеки tippy
 // With the above scripts loaded, you can call `tippy()` with a CSS
 // selector and a `content` prop:
-tippy('#myButton', {
-  content: 'Пример современных тенденций&nbsp;&mdash; современная методология разработки',
-  delay: 100,
-  interactive: true,
-  interactiveDebounce: 100,
-  maxWidth: 264,
-  offset: [0, 11],
-  touch: true,
-  allowHTML: true,
-  theme: 'amethyst',
-  arrow: true,
-  animation: 'shift-away',
-  // trigger: 'click',
-  placement: 'top',
-});
-
-tippy('#myButton-2', {
-  content: 'Приятно, граждане, наблюдать, как сделанные на&nbsp;базе аналитики выводы вызывают у&nbsp;вас эмоции',
-  delay: 100,
-  interactive: true,
-  interactiveDebounce: 100,
-  offset: [0, 11],
-  touch: true,
-  allowHTML: true,
-  theme: 'amethyst',
-  arrow: true,
-  animation: 'shift-away',
-  // trigger: 'click',
-  placement: 'top',
-});
-
-tippy('#myButton-3', {
-  content: 'В&nbsp;стремлении повысить качество',
-  delay: 100,
-  interactive: true,
-  interactiveDebounce: 100,
-  offset: [0, 11],
-  touch: true,
-  allowHTML: true,
-  theme: 'amethyst',
-  arrow: true,
-  animation: 'shift-away',
-  // trigger: 'click',
-  placement: 'top',
-});
+(() => {
+  tippy('.projects__toolpit-btn', {
+    delay: 100,
+    interactive: true,
+    interactiveDebounce: 100,
+    maxWidth: 264,
+    offset: [0, 11],
+    touch: true,
+    allowHTML: true,
+    theme: 'amethyst',
+    arrow: true,
+    animation: 'shift-away',
+    trigger: 'click',
+    placement: 'top',
+  });
+})();
 
 
  // слайд в секции проект
@@ -383,7 +353,7 @@ let progectsswipper = new Swiper('.projects__swipper', {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 0
+      spaceBetween: 25
     },
 
     576: {
