@@ -47,6 +47,17 @@ function onDisable(evt) {
 
 setMenuListener();
 
+
+// скроллбар
+document.querySelectorAll(".header__main-dropdown-wrap").forEach(dropdown => {
+  new SimpleBar(dropdown, {
+  /* чтобы изначально ползунок был виден */
+  autoHide: false,
+  /* с помощью этого значения вы можете управлять высотой ползунка*/
+  scrollbarMaxSize: 28,
+});
+})
+
 // слайдер в секции header
 let headerswiper = new Swiper('.js-hero-swiper', {
   // Optional parameters
@@ -179,7 +190,9 @@ $( function() {
     icons: false,
     heightStyle: "content",
     collapsible: true,
-    active: false
+    active: 0,
+    animate: 300,
+
   });
 
 } );
