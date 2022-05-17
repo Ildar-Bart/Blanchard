@@ -201,7 +201,7 @@ $( function() {
 
 let eventsswipper = new Swiper('.events__swipper', {
   // отступ между слайдами
-  spaceBetween: 50,
+  spaceBetween: 20,
 
 
   pagination: {
@@ -265,19 +265,19 @@ let eventsswipper = new Swiper('.events__swipper', {
       slidesPerGroup: 1,
     },
 
-    576: {
+    611: {
       slidesPerView: 2,
       spaceBetween: 34,
       slidesPerGroup: 2,
     },
 
-    992: {
+    971: {
       slidesPerView: 3,
       spaceBetween: 27,
       slidesPerGroup: 3,
     },
 
-    1440: {
+    1281: {
       slidesPerView: 3,
       spaceBetween: 50,
       slidesPerGroup: 3,

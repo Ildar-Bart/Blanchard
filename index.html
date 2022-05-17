@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link href="css/media.css" rel="stylesheet" />
+    <!-- <link href="css/media.css" rel="stylesheet" /> -->
 
     <link href="img/fav-icon.svg" type="image/x-icon" rel="shortcut icon" />
     <link href="img/fav-icon.svg" type="Image/x-icon" rel="icon" />
@@ -1500,46 +1500,40 @@
           <h2 class="events-title section-title">События</h2>
 
           <div class="events__clider">
-            <button class="sw-bt-e swiper-button-prev-event btn-reset"></button>
+            <button class="sw-bt-e swiper-button-prev-event btn-reset" aria-label="предыдуший слайд"></button>
 
-            <div class="swiper events__swipper">
-              <div class="swiper-wrapper events__swiper-wrapper">
-                <div class="swiper-slide events__swiper-slide">
-                  <article class="events__article-item">
+            <div class="swiper events__swipper events-slider__slider">
+              <ul class="swiper-wrapper events__swiper-wrapper list-reset">
+                <li class="swiper-slide events__swiper-slide">
                     <picture>
                       <source
-                        srcset="img/events/Rectangle-101-1-320.jpg"
-                        media="(max-width: 320px)"
+                        srcset="img/events/Rectangle-101-1.jpg"
+                        media="(max-width: 420px)"
                       />
                       <source
                         srcset="img/events/Rectangle-101-1-768.jpg"
-                        media="(max-width: 768px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-1.jpg"
-                        media="(max-width: 991px)"
+                        media="(max-width: 970px)"
                       />
                       <source
                         srcset="img/events/Rectangle-101-1-1024.jpg"
-                        media="(max-width: 1024px)"
+                        media="(max-width: 1280px)"
                       />
                       <img
                         class="events__article-item-img"
                         src="img/events/Rectangle-101-1.jpg"
-                        alt="book engraving"
+                        alt="book engraving" width="290px" height="200px"
                       />
                     </picture>
-
-                    <div class="events__article-item-descr">
+                    <div class="events__article-item-content">
                       <p class="events__article-item-event">
                         Музей им. Щусева <br />
                         с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
                       </p>
-                      <h4
+                      <h3
                         class="events__article-item-title events__article-item-title--1"
                       >
                         Книжная гравюра в живом восприятии
-                      </h4>
+                      </h3>
                       <p class="events__article-item-text">
                         Один из&nbsp;ведущих флорентийских художников
                         Кватроченто, основатель художественной династии, которую
@@ -1556,225 +1550,216 @@
                         продолжили его брат Давид и&nbsp;сын Ридольфо.
                       </p>
 
-                      <a class="events__article-item-link" href="/">
+                      <a class="events__article-item-link" href="#">
                         <span class="events__article-item-link-text"
                           >Подробнее</span
                         >
                       </a>
                     </div>
-                  </article>
-                </div>
-                <div class="swiper-slide events__swiper-slide">
-                  <article class="events__article-item">
-                    <picture>
-                      <source
-                        srcset="img/events/Rectangle-101-2-320.jpg"
-                        media="(max-width: 320px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-2-768.jpg"
-                        media="(max-width: 768px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-2.jpg"
-                        media="(max-width: 991px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-2-1024.jpg"
-                        media="(max-width: 1024px)"
-                      />
-                      <img
-                        class="events__article-item-img"
-                        src="img/events/Rectangle-101-2.jpg"
-                        alt="book engraving"
-                      />
-                    </picture>
-                    <div
-                      class="events__article-item-descr events__article-item-descr--2"
+
+                </li>
+                <li class="swiper-slide events__swiper-slide">
+
+                  <picture>
+                    <source
+                      srcset="img/events/Rectangle-101-1.jpg"
+                      media="(max-width: 420px)"
+                    />
+                    <source
+                      srcset="img/events/Rectangle-101-1-768.jpg"
+                      media="(max-width: 970px)"
+                    />
+                    <source
+                      srcset="img/events/Rectangle-101-1-1024.jpg"
+                      media="(max-width: 1280px)"
+                    />
+                    <img
+                      class="events__article-item-img"
+                      src="img/events/Rectangle-101-1.jpg"
+                      alt="book engraving" width="290px" height="200"
+                    />
+                  </picture>
+                  <div class="events__article-item-content">
+                    <p class="events__article-item-event">
+                      Музей им. Щусева <br />
+                      с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
+                    </p>
+                    <h3
+                      class="events__article-item-title events__article-item-title--1"
                     >
-                      <p
-                        class="events__article-item-event events__article-item-event--2"
+                      Книжная гравюра в живом восприятии
+                    </h3>
+                    <p class="events__article-item-text">
+                      Один из&nbsp;ведущих флорентийских художников
+                      Кватроченто, основатель художественной династии, которую
+                      продолжили его брат Давид и&nbsp;сын Ридольфо.
+                    </p>
+
+
+
+                    <a class="events__article-item-link" href="#">
+                      <span class="events__article-item-link-text"
+                        >Подробнее</span
                       >
-                        ММОМА <br />
-                        24&nbsp;марта 19:00
-                      </p>
-                      <h4 class="events__article-item-title">
-                        &laquo;Открытая дискуссия&raquo;. Дмитрий Петров
-                        и&nbsp;Сергей Ильин.
-                      </h4>
-                      <p class="events__article-item-text">
-                        Высокий уровень вовлечения представителей целевой
-                        аудитории является четким доказательством простого
-                        факта.
-                      </p>
-                      <a class="events__article-item-link" href="/">
-                        <span class="events__article-item-link-text"
-                          >Подробнее</span
-                        >
-                      </a>
-                    </div>
-                  </article>
-                </div>
-                <div class="swiper-slide events__swiper-slide">
-                  <article class="events__article-item">
-                    <picture>
-                      <source
-                        srcset="img/events/Rectangle-101-3-320.jpg"
-                        media="(max-width: 320px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-3-768.jpg"
-                        media="(max-width: 768px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-3.jpg"
-                        media="(max-width: 991px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-3-1024.jpg"
-                        media="(max-width: 1024px)"
-                      />
-                      <img
-                        class="events__article-item-img"
-                        src="img/events/Rectangle-101-3.jpg"
-                        alt="book engraving"
-                      />
-                    </picture>
-                    <div
-                      class="events__article-item-descr events__article-item-descr--2"
+                    </a>
+                  </div>
+
+                </li>
+                <li class="swiper-slide events__swiper-slide">
+
+                <picture>
+                  <source
+                    srcset="img/events/Rectangle-101-1.jpg"
+                    media="(max-width: 420px)"
+                  />
+                  <source
+                    srcset="img/events/Rectangle-101-1-768.jpg"
+                    media="(max-width: 970px)"
+                  />
+                  <source
+                    srcset="img/events/Rectangle-101-1-1024.jpg"
+                    media="(max-width: 1280px)"
+                  />
+                  <img
+                    class="events__article-item-img"
+                    src="img/events/Rectangle-101-1.jpg"
+                    alt="book engraving" width="290px" height="200"
+                  />
+                </picture>
+                <div class="events__article-item-content">
+                  <p class="events__article-item-event">
+                    Музей им. Щусева <br />
+                    с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
+                  </p>
+                  <h3
+                    class="events__article-item-title events__article-item-title--1"
+                  >
+                    Книжная гравюра в живом восприятии
+                  </h3>
+                  <p class="events__article-item-text">
+                    Один из&nbsp;ведущих флорентийских художников
+                    Кватроченто, основатель художественной династии, которую
+                    продолжили его брат Давид и&nbsp;сын Ридольфо.
+                  </p>
+
+
+
+                  <a class="events__article-item-link" href="#">
+                    <span class="events__article-item-link-text"
+                      >Подробнее</span
                     >
-                      <p
-                        class="events__article-item-event events__article-item-event--2"
-                      >
-                        Еврейский музей <br />
-                        с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля
-                      </p>
-                      <h4 class="events__article-item-title">
-                        Выставка &laquo;Формация 2020&raquo;
-                      </h4>
-                      <p class="events__article-item-text">
-                        Идейные соображения высшего порядка, а&nbsp;также
-                        современная методология разработки играет важную роль
-                        в&nbsp;формировании глубокомысленных рассуждений.
-                      </p>
-                      <a class="events__article-item-link" href="/">
-                        <span class="events__article-item-link-text"
-                          >Подробнее</span
-                        >
-                      </a>
-                    </div>
-                  </article>
+                  </a>
                 </div>
-                <div class="swiper-slide events__swiper-slide">
-                  <article class="events__article-item">
-                    <picture>
-                      <source
-                        srcset="img/events/Rectangle-101-4-320.jpg"
-                        media="(max-width: 320px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-4-768.jpg"
-                        media="(max-width: 768px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-4.jpg"
-                        media="(max-width: 991px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-4-1024.jpg"
-                        media="(max-width: 1024px)"
-                      />
-                      <img
-                        class="events__article-item-img"
-                        src="img/events/Rectangle-101-4.jpg"
-                        alt="book engraving"
-                      />
-                    </picture>
-                    <div
-                      class="events__article-item-descr events__article-item-descr--5"
-                    >
-                      <p
-                        class="events__article-item-event events__article-item-event--2"
-                      >
-                        ММАМ <br />
-                        с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая
-                      </p>
-                      <h4
-                        class="events__article-item-title events__article-item-title--5"
-                      >
-                        Джон Винзор. Фотографии&nbsp;из серии &laquo;Метафора
-                        серебра&raquo;
-                      </h4>
-                      <p class="events__article-item-text">
-                        Один из&nbsp;ведущих флорентийских художников
-                        Кватроченто, основатель художественной династии, которую
-                        продолжили его брат Давид и&nbsp;сын Ридольфо.
-                      </p>
-                      <a class="events__article-item-link" href="/">
-                        <span class="events__article-item-link-text"
-                          >Подробнее</span
-                        >
-                      </a>
-                    </div>
-                  </article>
-                </div>
-                <div class="swiper-slide events__swiper-slide">
-                  <article class="events__article-item">
-                    <picture>
-                      <source
-                        srcset="img/events/Rectangle-101-5-320.jpg"
-                        media="(max-width: 320px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-5-768.jpg"
-                        media="(max-width: 768px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-5.jpg"
-                        media="(max-width: 991px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-5-1024.jpg"
-                        media="(max-width: 1024px)"
-                      />
-                      <img
-                        class="events__article-item-img"
-                        src="img/events/Rectangle-101-5.jpg"
-                        alt="book engraving"
-                      />
-                    </picture>
-                    <div
-                      class="events__article-item-descr events__article-item-descr--5"
-                    >
-                      <p
-                        class="events__article-item-event events__article-item-event--2"
-                      >
-                        Третьяковка на&nbsp;Крымском валу <br />
-                        с&nbsp;30&nbsp;марта по&nbsp;30&nbsp;апреля
-                      </p>
-                      <h4 class="events__article-item-title">
-                        XXIV Международная биеннале молодого искусства
-                      </h4>
-                      <p class="events__article-item-text">
-                        Внезапно, реплицированные с&nbsp;зарубежных источников,
-                        современные исследования.
-                      </p>
-                      <a class="events__article-item-link" href="/">
-                        <span class="events__article-item-link-text"
-                          >Подробнее</span
-                        >
-                      </a>
-                    </div>
-                  </article>
-                </div>
+
+                </li>
+                <li class="swiper-slide events__swiper-slide">
+
+              <picture>
+                <source
+                  srcset="img/events/Rectangle-101-1.jpg"
+                  media="(max-width: 420px)"
+                />
+                <source
+                  srcset="img/events/Rectangle-101-1-768.jpg"
+                  media="(max-width: 970px)"
+                />
+                <source
+                  srcset="img/events/Rectangle-101-1-1024.jpg"
+                  media="(max-width: 1280px)"
+                />
+                <img
+                  class="events__article-item-img"
+                  src="img/events/Rectangle-101-1.jpg"
+                  alt="book engraving" width="290px" height="200"
+                />
+              </picture>
+              <div class="events__article-item-content">
+                <p class="events__article-item-event">
+                  Музей им. Щусева <br />
+                  с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
+                </p>
+                <h3
+                  class="events__article-item-title events__article-item-title--1"
+                >
+                  Книжная гравюра в живом восприятии
+                </h3>
+                <p class="events__article-item-text">
+                  Один из&nbsp;ведущих флорентийских художников
+                  Кватроченто, основатель художественной династии, которую
+                  продолжили его брат Давид и&nbsp;сын Ридольфо.
+                </p>
+
+
+
+                <a class="events__article-item-link" href="#">
+                  <span class="events__article-item-link-text"
+                    >Подробнее</span
+                  >
+                </a>
               </div>
+
+                </li>
+                <li class="swiper-slide events__swiper-slide">
+
+                <picture>
+                  <source
+                    srcset="img/events/Rectangle-101-1.jpg"
+                    media="(max-width: 420px)"
+                  />
+                  <source
+                    srcset="img/events/Rectangle-101-1-768.jpg"
+                    media="(max-width: 970px)"
+                  />
+                  <source
+                    srcset="img/events/Rectangle-101-1-1024.jpg"
+                    media="(max-width: 1280px)"
+                  />
+                  <img
+                    class="events__article-item-img"
+                    src="img/events/Rectangle-101-1.jpg"
+                    alt="book engraving" width="290px" height="200"
+                  />
+                </picture>
+                <div class="events__article-item-content">
+                  <p class="events__article-item-event">
+                    Музей им. Щусева <br />
+                    с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
+                  </p>
+                  <h3
+                    class="events__article-item-title events__article-item-title--1"
+                  >
+                    Книжная гравюра в живом восприятии
+                  </h3>
+                  <p class="events__article-item-text">
+                    Один из&nbsp;ведущих флорентийских художников
+                    Кватроченто, основатель художественной династии, которую
+                    продолжили его брат Давид и&nbsp;сын Ридольфо.
+                  </p>
+
+
+
+                  <a class="events__article-item-link" href="#">
+                    <span class="events__article-item-link-text"
+                      >Подробнее</span
+                    >
+                  </a>
+                </div>
+
+                </li>
+
+
+              </ul>
+
             </div>
             <div class="events__swiper-pagination"></div>
 
-            <button class="sw-bt-e swiper-button-next-event btn-reset"></button>
+            <button class="sw-bt-e swiper-button-next-event btn-reset" aria-label="следующий слайд"></button>
           </div>
         </div>
       </section>
+
+
+
 
       <section class="section-projects" id="projects">
         <div class="container projects section-offset">

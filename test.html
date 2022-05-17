@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="css/normalize.css" rel="stylesheet" />
+</head>
+
+<style>
+
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .container {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 0px 25px;
+    max-width: 100%;
+    border: 1px solid red
+  }
+
+  .events__swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  .events__swiper-slide {
+    width: calc((100% - 50px * 2) / 3);
+
+  }
+
+  .events__article-item {
+    display: flex;
+    min-height: 500px;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .events__swiper-slide:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .events__article-item-descr {
+    border: 1px solid yellow;
+  }
+
+  .events__article-item-img {
+    float: top;
+  }
+
+</style>
+
+<body>
+  <div class="container">
+    <ul class="swiper-wrapper events__swiper-wrapper">
+      <li class="swiper-slide events__swiper-slide">
+        <article class="events__article-item">
+          <picture>
+            <source
+              srcset="img/events/Rectangle-101-1-320.jpg"
+              media="(max-width: 320px)"
+            />
+            <source
+              srcset="img/events/Rectangle-101-1-768.jpg"
+              media="(max-width: 768px)"
+            />
+            <source
+              srcset="img/events/Rectangle-101-1.jpg"
+              media="(max-width: 991px)"
+            />
+            <source
+              srcset="img/events/Rectangle-101-1-1024.jpg"
+              media="(max-width: 1024px)"
+            />
+            <img
+              class="events__article-item-img"
+              src="img/events/Rectangle-101-1.jpg"
+              alt="book engraving"
+            />
+          </picture>
+
+          <div class="events__article-item-descr">
+            <p class="events__article-item-event">
+              Музей им. Щусева <br />
+              с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
+            </p>
+            <h4
+              class="events__article-item-title events__article-item-title--1"
+            >
+              Книжная гравюра в живом восприятии
+            </h4>
+            <p class="events__article-item-text">
+              Один из&nbsp;ведущих флорентийских художников
+              Кватроченто, основатель художественной династии, которую
+              продолжили его брат Давид и&nbsp;сын Ридольфо.
+            </p>
+            <p class="events__article-item-text">
+              Один из&nbsp;ведущих флорентийских художников
+              Кватроченто, основатель художественной династии, которую
+              продолжили его брат Давид и&nbsp;сын Ридольфо.
+            </p>
+
+            <a class="events__article-item-link" href="/">
+              <span class="events__article-item-link-text"
+                >Подробнее</span
+              >
+            </a>
+          </div>
+        </article>
+      </li>
+      <li class="swiper-slide events__swiper-slide">
+        <article class="events__article-item">
+          <picture>
+            <source
+              srcset="img/events/Rectangle-101-2-320.jpg"
+              media="(max-width: 320px)"
+            />
+            <source
+              srcset="img/events/Rectangle-101-2-768.jpg"
+              media="(max-width: 768px)"
+            />
+            <source
+              srcset="img/events/Rectangle-101-2.jpg"
+              media="(max-width: 991px)"
+            />
+            <source
+              srcset="img/events/Rectangle-101-2-1024.jpg"
+              media="(max-width: 1024px)"
+            />
+            <img
+              class="events__article-item-img"
+              src="img/events/Rectangle-101-2.jpg"
+              alt="book engraving"
+            />
+          </picture>
+          <div
+            class="events__article-item-descr events__article-item-descr--2"
+          >
+            <p
+              class="events__article-item-event events__article-item-event--2"
+            >
+              ММОМА <br />
+              24&nbsp;марта 19:00
+            </p>
+            <h4 class="events__article-item-title">
+              &laquo;Открытая дискуссия&raquo;. Дмитрий Петров
+              и&nbsp;Сергей Ильин.
+            </h4>
+            <p class="events__article-item-text">
+              Высокий уровень вовлечения представителей целевой
+              аудитории является четким доказательством простого
+              факта.
+            </p>
+            <a class="events__article-item-link" href="/">
+              <span class="events__article-item-link-text"
+                >Подробнее</span
+              >
+            </a>
+          </div>
+        </article>
+      </li>
+      <li class="swiper-slide events__swiper-slide">
+        <article class="events__article-item">
+          <picture>
+            <source
+              srcset="img/events/Rectangle-101-3-320.jpg"
+              media="(max-width: 320px)"
+            />
+            <source
+              srcset="img/events/Rectangle-101-3-768.jpg"
+              media="(max-width: 768px)"
+            />
+            <source
+              srcset="img/events/Rectangle-101-3.jpg"
+              media="(max-width: 991px)"
+            />
+            <source
+              srcset="img/events/Rectangle-101-3-1024.jpg"
+              media="(max-width: 1024px)"
+            />
+            <img
+              class="events__article-item-img"
+              src="img/events/Rectangle-101-3.jpg"
+              alt="book engraving"
+            />
+          </picture>
+          <div
+            class="events__article-item-descr events__article-item-descr--2"
+          >
+            <p
+              class="events__article-item-event events__article-item-event--2"
+            >
+              Еврейский музей <br />
+              с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля
+            </p>
+            <h4 class="events__article-item-title">
+              Выставка &laquo;Формация 2020&raquo;
+            </h4>
+            <p class="events__article-item-text">
+              Идейные соображения высшего порядка, а&nbsp;также
+              современная методология разработки играет важную роль
+              в&nbsp;формировании глубокомысленных рассуждений.
+            </p>
+            <a class="events__article-item-link" href="/">
+              <span class="events__article-item-link-text"
+                >Подробнее</span
+              >
+            </a>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
