@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="css/normalize.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <!-- <link href="css/media.css" rel="stylesheet" /> -->
+    <link href="css/media.css" rel="stylesheet" />
 
     <link href="img/fav-icon.svg" type="image/x-icon" rel="shortcut icon" />
     <link href="img/fav-icon.svg" type="Image/x-icon" rel="icon" />
@@ -62,10 +62,11 @@
         <div class="header__top">
           <div class="container header__top-container flex">
             <button
-              class="header__btn-open btn-reset"
+              class="header__burger burger btn-reset"
               aria-label="кнопка открытия навигации"
+              type="button"
             >
-              <svg
+              <svg class="header__burger-svg"
                 width="36"
                 height="29"
                 viewBox="0 0 36 29"
@@ -92,12 +93,12 @@
                 alt="logo"
               />
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav flex">
               <button
-                class="header__btn-close btn-reset"
+                class="header__burger-close btn-reset"
                 aria-label="кнопка закрытия навигации"
               >
-                <svg
+                <svg class="header__burger-close-svg"
                   width="29"
                   height="29"
                   viewBox="0 0 29 29"
@@ -121,136 +122,123 @@
                 </svg>
               </button>
 
-              <ul class="header__nav-list flex reset-list">
+              <ul class="header__nav-list flex list-reset">
                 <li class="header__nav-item">
-                  <a class="header__nav-item-link" href="#about">О&nbsp;нас</a>
+                  <a class="header__nav-link" href="#about"><span class="header__link-text">О&nbsp;нас</span></a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-item-link" href="#gallery">Галерея</a>
+                  <a class="header__nav-link" href="#gallery"><span class="header__link-text">Галерея</span></a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-item-link" href="#catalog">Каталог</a>
+                  <a class="header__nav-link" href="#catalog"><span class="header__link-text">Каталог</span></a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-item-link" href="#events">События</a>
+                  <a class="header__nav-link" href="#events"><span class="header__link-text">События</span></a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-item-link" href="#projects">Проекты</a>
+                  <a class="header__nav-link" href="#projects"><span class="header__link-text">Проекты</span></a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__nav-item-link" href="#contacts">Контакты</a>
+                  <a class="header__nav-link" href="#contacts"><span class="header__link-text">Контакты</span></a>
                 </li>
               </ul>
 
-              <a class="header__come-in-link" href="">
-                <svg
-                  width="13"
-                  height="13"
-                  viewBox="0 0 13 13"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
-                    fill="white"
-                  ></path>
-                </svg>
-                <span class="header__come-in-link-text"> Войти </span>
+              <a class="header__account" href="">
+                <span class="header__account-content">
+                  <svg class="header__account-svg" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z" fill="currentColor"/>
+                    </svg>
+                  <span class="header__link-text header__link-text--1">Войти</span>
+                </span>
               </a>
             </nav>
 
-            <div class="header__search">
+            <button
+            class="header__btn-search-open btn-reset"
+            aria-label="кнопка открытия поиска"
+            type="button"
+          >
+            <svg class="header__btn-search-open-svg"
+              width="30"
+              height="29"
+              viewBox="0 0 30 29"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="9.15446"
+                height="2.28862"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)"
+                fill="white"
+              ></rect>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+                fill="white"
+              ></path>
+            </svg>
+          </button>
+
+            <form action="" class="header__search">
+              <input class="header__search-input" type="text" placeholder="Поиск по сайту">
               <button
-                class="header__btn-search btn-reset"
-                aria-label="кнопка открытия поиска"
-              >
-                <svg
-                  width="30"
-                  height="29"
-                  viewBox="0 0 30 29"
-                  fill="none"
+                class="header__search-btm btn-reset"
+                aria-label="кнопка поиска" type="submit">
+                <svg class="header__search-btm-svg"
+                  width="23"
+                  height="22"
+                  viewBox="0 0 23 22"
+                  fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <rect
-                    width="9.15446"
-                    height="2.28862"
-                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)"
-                    fill="white"
+                    width="6.8678"
+                    height="1.71695"
+                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"
+                    fill="currentColor"
                   ></rect>
                   <path
                     fill-rule="evenodd"
                     clip-rule="evenodd"
-                    d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
-                    fill="white"
+                    d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                    fill="currentColor"
                   ></path>
                 </svg>
               </button>
-              <form class="header__form" action="/">
-                <button
-                  class="header__form-btn-submit btn-reset"
-                  aria-label="кнопка поиска"
-                >
-                  <svg
-                    width="30"
-                    height="29"
-                    viewBox="0 0 30 29"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      width="9.15446"
-                      height="2.28862"
-                      transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)"
-                      fill="white"
-                    ></rect>
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
-                      fill="white"
-                    ></path>
-                  </svg>
-                </button>
-                <input
-                  class="header__form-input"
-                  aria-label="Поле поиска"
-                  type="text"
-                  name="поиск"
-                />
-                <button
-                  class="header__form-btn-close btn-reset"
-                  aria-label="кнопка закрытия поиска"
-                  type="button"
-                >
-                  <svg
-                    width="23"
-                    height="23"
-                    viewBox="0 0 23 23"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect
-                      width="29.567"
-                      height="2.9567"
-                      transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)"
-                      fill="white"
-                    ></rect>
-                    <rect
-                      width="29.567"
-                      height="2.9567"
-                      transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)"
-                      fill="white"
-                    ></rect>
-                  </svg>
-                </button>
-              </form>
-            </div>
+              <button
+              class="header__form-btn-close btn-reset"
+              aria-label="кнопка закрытия поиска"
+              type="button"
+            >
+              <svg class="header__form-btn-close-svg"
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  width="29.567"
+                  height="2.9567"
+                  transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)"
+                  fill="white"
+                ></rect>
+                <rect
+                  width="29.567"
+                  height="2.9567"
+                  transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)"
+                  fill="white"
+                ></rect>
+              </svg>
+            </button>
+            </form>
           </div>
         </div>
 
         <div class="header-bottom">
           <div class="container header-bottom-container">
-            <ul class="header__main-list reset-list">
+            <ul class="header__main-list list-reset">
               <li class="header__main-item">
                 <button
                   class="header__main-item-btn js-header-dropdown-btn btn-reset"
@@ -325,7 +313,7 @@
                   class="header__main-dropdown js-header-drop"
                   data-target="two"
                 >
-                  <div class="header__main-dropdown-wrap" data-simplebar>
+                  <div class="header__main-dropdown-wrap">
                     <ul class="header__main-drop-list reset-list">
                       <li class="header__main-drop-item">
                         <a
@@ -560,40 +548,7 @@
               </li>
             </ul>
 
-            <form class="header__bottom-form" action="/">
-              <button
-                class="header__bottom-form-btm btn-reset"
-                aria-label="кнопка поиска"
-              >
-                <svg
-                  width="23"
-                  height="22"
-                  viewBox="0 0 23 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect
-                    width="6.8678"
-                    height="1.71695"
-                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)"
-                    fill="white"
-                  ></rect>
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </button>
-              <input
-                class="header__bottom-form-input"
-                aria-label="поиск по сайту"
-                type="text"
-                name="поиск"
-                placeholder="Поиск по&nbsp;сайту"
-              />
-            </form>
+
           </div>
         </div>
 
@@ -622,7 +577,7 @@
       </div>
     </div>
 
-    <main>
+    <!-- <main>
       <section class="section-about" id="about">
         <div class="container about section-offset">
           <h2 class="about__title section-title">О&nbsp;нас</h2>
@@ -1502,64 +1457,9 @@
           <div class="events__clider">
             <button class="sw-bt-e swiper-button-prev-event btn-reset" aria-label="предыдуший слайд"></button>
 
-            <div class="swiper events__swipper events-slider__slider">
+            <div class="swiper events__swipper">
               <ul class="swiper-wrapper events__swiper-wrapper list-reset">
                 <li class="swiper-slide events__swiper-slide">
-                    <picture>
-                      <source
-                        srcset="img/events/Rectangle-101-1.jpg"
-                        media="(max-width: 420px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-1-768.jpg"
-                        media="(max-width: 970px)"
-                      />
-                      <source
-                        srcset="img/events/Rectangle-101-1-1024.jpg"
-                        media="(max-width: 1280px)"
-                      />
-                      <img
-                        class="events__article-item-img"
-                        src="img/events/Rectangle-101-1.jpg"
-                        alt="book engraving" width="290px" height="200px"
-                      />
-                    </picture>
-                    <div class="events__article-item-content">
-                      <p class="events__article-item-event">
-                        Музей им. Щусева <br />
-                        с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
-                      </p>
-                      <h3
-                        class="events__article-item-title events__article-item-title--1"
-                      >
-                        Книжная гравюра в живом восприятии
-                      </h3>
-                      <p class="events__article-item-text">
-                        Один из&nbsp;ведущих флорентийских художников
-                        Кватроченто, основатель художественной династии, которую
-                        продолжили его брат Давид и&nbsp;сын Ридольфо.
-                      </p>
-                      <p class="events__article-item-text">
-                        Один из&nbsp;ведущих флорентийских художников
-                        Кватроченто, основатель художественной династии, которую
-                        продолжили его брат Давид и&nbsp;сын Ридольфо.
-                      </p>
-                      <p class="events__article-item-text">
-                        Один из&nbsp;ведущих флорентийских художников
-                        Кватроченто, основатель художественной династии, которую
-                        продолжили его брат Давид и&nbsp;сын Ридольфо.
-                      </p>
-
-                      <a class="events__article-item-link" href="#">
-                        <span class="events__article-item-link-text"
-                          >Подробнее</span
-                        >
-                      </a>
-                    </div>
-
-                </li>
-                <li class="swiper-slide events__swiper-slide">
-
                   <picture>
                     <source
                       srcset="img/events/Rectangle-101-1.jpg"
@@ -1574,179 +1474,197 @@
                       media="(max-width: 1280px)"
                     />
                     <img
-                      class="events__article-item-img"
+                      class="events__item-img"
                       src="img/events/Rectangle-101-1.jpg"
-                      alt="book engraving" width="290px" height="200"
+                      alt="book engraving" width="290px" height="200px"
                     />
                   </picture>
-                  <div class="events__article-item-content">
-                    <p class="events__article-item-event">
+                  <div class="events__item-content">
+                    <p class="events__item-event">
                       Музей им. Щусева <br />
                       с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
                     </p>
                     <h3
-                      class="events__article-item-title events__article-item-title--1"
+                      class="events__item-title events__item-title--1"
                     >
                       Книжная гравюра в живом восприятии
                     </h3>
-                    <p class="events__article-item-text">
+                    <p class="events__item-text">
                       Один из&nbsp;ведущих флорентийских художников
                       Кватроченто, основатель художественной династии, которую
                       продолжили его брат Давид и&nbsp;сын Ридольфо.
                     </p>
 
-
-
-                    <a class="events__article-item-link" href="#">
-                      <span class="events__article-item-link-text"
+                    <a class="events__item-link" href="#">
+                      <span class="events__item-link-text"
                         >Подробнее</span
                       >
                     </a>
                   </div>
-
                 </li>
                 <li class="swiper-slide events__swiper-slide">
-
-                <picture>
-                  <source
-                    srcset="img/events/Rectangle-101-1.jpg"
-                    media="(max-width: 420px)"
-                  />
-                  <source
-                    srcset="img/events/Rectangle-101-1-768.jpg"
-                    media="(max-width: 970px)"
-                  />
-                  <source
-                    srcset="img/events/Rectangle-101-1-1024.jpg"
-                    media="(max-width: 1280px)"
-                  />
-                  <img
-                    class="events__article-item-img"
-                    src="img/events/Rectangle-101-1.jpg"
-                    alt="book engraving" width="290px" height="200"
-                  />
-                </picture>
-                <div class="events__article-item-content">
-                  <p class="events__article-item-event">
-                    Музей им. Щусева <br />
-                    с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
-                  </p>
-                  <h3
-                    class="events__article-item-title events__article-item-title--1"
-                  >
-                    Книжная гравюра в живом восприятии
-                  </h3>
-                  <p class="events__article-item-text">
-                    Один из&nbsp;ведущих флорентийских художников
-                    Кватроченто, основатель художественной династии, которую
-                    продолжили его брат Давид и&nbsp;сын Ридольфо.
-                  </p>
-
-
-
-                  <a class="events__article-item-link" href="#">
-                    <span class="events__article-item-link-text"
-                      >Подробнее</span
+                  <picture>
+                    <source
+                      srcset="img/events/Rectangle-101-2.jpg"
+                      media="(max-width: 420px)"
+                    />
+                    <source
+                      srcset="img/events/Rectangle-101-2-768.jpg"
+                      media="(max-width: 970px)"
+                    />
+                    <source
+                      srcset="img/events/Rectangle-101-2-1024.jpg"
+                      media="(max-width: 1280px)"
+                    />
+                    <img
+                      class="events__item-img"
+                      src="img/events/Rectangle-101-2.jpg"
+                      alt="book engraving" width="290px" height="200"
+                    />
+                  </picture>
+                  <div class="events__item-content">
+                    <p class="events__item-event events__item-event--2">
+                      ММОМА <br />
+                      24&nbsp;марта 19:00
+                    </p>
+                    <h3 class="events__item-title">
+                      &laquo;Открытая дискуссия&raquo;. Дмитрий Петров
+                      и&nbsp;Сергей Ильин.
+                    </h3>
+                    <p class="events__item-text">
+                      Высокий уровень вовлечения представителей целевой
+                      аудитории является четким доказательством простого
+                      факта.
+                    </p>
+                    <a href="/" class="events__item-link">
+                      <span class="events__item-link-text"
+                        >Подробнее</span
+                      >
+                    </a>
+                  </div>
+                </li>
+                <li class="swiper-slide events__swiper-slide">
+                  <picture>
+                    <source
+                      srcset="img/events/Rectangle-101-3.jpg"
+                      media="(max-width: 420px)"
+                    />
+                    <source
+                      srcset="img/events/Rectangle-101-3-768.jpg"
+                      media="(max-width: 970px)"
+                    />
+                    <source
+                      srcset="img/events/Rectangle-101-3-1024.jpg"
+                      media="(max-width: 1280px)"
+                    />
+                    <img
+                      class="events__item-img"
+                      src="img/events/Rectangle-101-3.jpg"
+                      alt="book engraving" width="290px" height="200"
+                    />
+                  </picture>
+                  <div class="events__item-content">
+                    <p class="events__item-event events__item-event--2">
+                      Еврейский музей <br />
+                      с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля
+                    </p>
+                    <h4 class="events__item-title">
+                      Выставка &laquo;Формация 2020&raquo;
+                    </h4>
+                    <p class="events__item-text">
+                      Идейные соображения высшего порядка, а&nbsp;также
+                      современная методология разработки играет важную роль
+                      в&nbsp;формировании глубокомысленных рассуждений.
+                    </p>
+                    <a href="/" class="events__item-link">
+                      <span class="events__item-link-text"
+                        >Подробнее</span
+                      >
+                    </a>
+                  </div>
+                </li>
+                <li class="swiper-slide events__swiper-slide">
+                  <picture>
+                    <source
+                      srcset="img/events/Rectangle-101-4.jpg"
+                      media="(max-width: 420px)"
+                    />
+                    <source
+                      srcset="img/events/Rectangle-101-4-768.jpg"
+                      media="(max-width: 970px)"
+                    />
+                    <source
+                      srcset="img/events/Rectangle-101-4-1024.jpg"
+                      media="(max-width: 1280px)"
+                    />
+                    <img
+                      class="events__item-img"
+                      src="img/events/Rectangle-101-4.jpg"
+                      alt="book engraving" width="290px" height="200"
+                    />
+                  </picture>
+                  <div class="events__item-content">
+                    <p class="events__item-event events__item-event--2">
+                      ММАМ <br />
+                      с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая
+                    </p>
+                    <h4
+                      class="events__item-title events__item-title--5"
                     >
-                  </a>
-                </div>
-
+                      Джон Винзор. Фотографии&nbsp;из серии &laquo;Метафора
+                      серебра&raquo;
+                    </h4>
+                    <p class="events__item-text">
+                      Один из&nbsp;ведущих флорентийских художников
+                      Кватроченто, основатель художественной династии, которую
+                      продолжили его брат Давид и&nbsp;сын Ридольфо.
+                    </p>
+                    <a href="/" class="events__item-link">
+                      <span class="events__item-link-text"
+                        >Подробнее</span
+                      >
+                    </a>
+                  </div>
                 </li>
                 <li class="swiper-slide events__swiper-slide">
-
-              <picture>
-                <source
-                  srcset="img/events/Rectangle-101-1.jpg"
-                  media="(max-width: 420px)"
-                />
-                <source
-                  srcset="img/events/Rectangle-101-1-768.jpg"
-                  media="(max-width: 970px)"
-                />
-                <source
-                  srcset="img/events/Rectangle-101-1-1024.jpg"
-                  media="(max-width: 1280px)"
-                />
-                <img
-                  class="events__article-item-img"
-                  src="img/events/Rectangle-101-1.jpg"
-                  alt="book engraving" width="290px" height="200"
-                />
-              </picture>
-              <div class="events__article-item-content">
-                <p class="events__article-item-event">
-                  Музей им. Щусева <br />
-                  с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
-                </p>
-                <h3
-                  class="events__article-item-title events__article-item-title--1"
-                >
-                  Книжная гравюра в живом восприятии
-                </h3>
-                <p class="events__article-item-text">
-                  Один из&nbsp;ведущих флорентийских художников
-                  Кватроченто, основатель художественной династии, которую
-                  продолжили его брат Давид и&nbsp;сын Ридольфо.
-                </p>
-
-
-
-                <a class="events__article-item-link" href="#">
-                  <span class="events__article-item-link-text"
-                    >Подробнее</span
-                  >
-                </a>
-              </div>
-
+                  <picture>
+                    <source
+                      srcset="img/events/Rectangle-101-5.jpg"
+                      media="(max-width: 420px)"
+                    />
+                    <source
+                      srcset="img/events/Rectangle-101-5-768.jpg"
+                      media="(max-width: 970px)"
+                    />
+                    <source
+                      srcset="img/events/Rectangle-101-5-1024.jpg"
+                      media="(max-width: 1280px)"
+                    />
+                    <img
+                      class="events__item-img"
+                      src="img/events/Rectangle-101-5.jpg"
+                      alt="book engraving" width="290px" height="200"
+                    />
+                  </picture>
+                  <div class="events__item-content">
+                    <p class="events__item-event events__item-event--2">
+                      Третьяковка на&nbsp;Крымском валу <br />
+                      с&nbsp;30&nbsp;марта по&nbsp;30&nbsp;апреля
+                    </p>
+                    <h4 class="events__item-title">
+                      XXIV Международная биеннале молодого искусства
+                    </h4>
+                    <p class="events__item-text">
+                      Внезапно, реплицированные с&nbsp;зарубежных источников,
+                      современные исследования.
+                    </p>
+                    <a href="/" class="events__item-link">
+                      <span class="events__item-link-text"
+                        >Подробнее</span
+                      >
+                    </a>
+                  </div>
                 </li>
-                <li class="swiper-slide events__swiper-slide">
-
-                <picture>
-                  <source
-                    srcset="img/events/Rectangle-101-1.jpg"
-                    media="(max-width: 420px)"
-                  />
-                  <source
-                    srcset="img/events/Rectangle-101-1-768.jpg"
-                    media="(max-width: 970px)"
-                  />
-                  <source
-                    srcset="img/events/Rectangle-101-1-1024.jpg"
-                    media="(max-width: 1280px)"
-                  />
-                  <img
-                    class="events__article-item-img"
-                    src="img/events/Rectangle-101-1.jpg"
-                    alt="book engraving" width="290px" height="200"
-                  />
-                </picture>
-                <div class="events__article-item-content">
-                  <p class="events__article-item-event">
-                    Музей им. Щусева <br />
-                    с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
-                  </p>
-                  <h3
-                    class="events__article-item-title events__article-item-title--1"
-                  >
-                    Книжная гравюра в живом восприятии
-                  </h3>
-                  <p class="events__article-item-text">
-                    Один из&nbsp;ведущих флорентийских художников
-                    Кватроченто, основатель художественной династии, которую
-                    продолжили его брат Давид и&nbsp;сын Ридольфо.
-                  </p>
-
-
-
-                  <a class="events__article-item-link" href="#">
-                    <span class="events__article-item-link-text"
-                      >Подробнее</span
-                    >
-                  </a>
-                </div>
-
-                </li>
-
 
               </ul>
 
@@ -2003,7 +1921,7 @@
           <div class="map__block" id="map"></div>
         </div>
       </section>
-    </main>
+    </main> -->
 
     <footer class="footer">
       <div class="container footer__container">
