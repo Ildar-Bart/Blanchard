@@ -155,25 +155,25 @@ let galleryswiper = new Swiper('.gallery__swiper', {
   speed: 500,
 
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 25,
-      slidesPerGroup: 1,
-    },
-
-    576: {
+    441: {
       slidesPerView: 2,
       spaceBetween: 38,
       slidesPerGroup: 2,
     },
 
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 34,
-      slidesPerGroup: 2,
-    },
+    // 576: {
+    //   slidesPerView: 2,
+    //   spaceBetween: 38,
+    //   slidesPerGroup: 2,
+    // },
 
-    1440: {
+    // 768: {
+    //   slidesPerView: 2,
+    //   spaceBetween: 34,
+    //   slidesPerGroup: 2,
+    // },
+
+    1200: {
       slidesPerView: 3,
       spaceBetween: 50,
       slidesPerGroup: 3,
@@ -259,13 +259,14 @@ let eventsswipper = new Swiper('.events__swipper', {
   speed: 500,
 
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 50,
-      slidesPerGroup: 1,
+
+    441: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      slidesPerGroup: 2,
     },
 
-    611: {
+    576: {
       slidesPerView: 2,
       spaceBetween: 34,
       slidesPerGroup: 2,
@@ -364,28 +365,32 @@ let progectsswipper = new Swiper('.projects__swipper', {
 
   //Брейк поинт, ширина экрана
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 25
+
+
+    441: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      slidesPerGroup: 2,
     },
 
-    576: {
+    610: {
       slidesPerView: 2,
       spaceBetween: 34,
       slidesPerGroup: 2,
     },
 
-    992: {
+    971: {
       slidesPerView: 2,
       spaceBetween: 50,
       slidesPerGroup: 2,
     },
 
-    1440: {
+    1281: {
       slidesPerView: 3,
       spaceBetween: 50,
       slidesPerGroup: 3,
-    },
+    }
+
   },
 });
 
@@ -450,19 +455,19 @@ new window.JustValidate('.contacts__form', {
       }
 });
 
-// табы
-document.querySelectorAll('.catalog__tabs-nav-item-btn').forEach(function(tabsBtn){
-  tabsBtn.addEventListener('click', function(e){
-  const path = e.currentTarget.dataset.path;
+// // табы
+// document.querySelectorAll('.catalog__tabs-nav-item-btn').forEach(function(tabsBtn){
+//   tabsBtn.addEventListener('click', function(e){
+//   const path = e.currentTarget.dataset.path;
 
-  document.querySelectorAll('.catalog__tabs-nav-item-btn').forEach(function(btn){
-  btn.classList.remove('catalog__tabs-nav-item-btn--active')});
-  e.currentTarget.classList.add('catalog__tabs-nav-item-btn--active');
+//   document.querySelectorAll('.catalog__tabs-nav-item-btn').forEach(function(btn){
+//   btn.classList.remove('catalog__tabs-nav-item-btn--active')});
+//   e.currentTarget.classList.add('catalog__tabs-nav-item-btn--active');
 
-  document.querySelectorAll('.catalog__tabs-item').forEach(function(tabsBtn){
-  tabsBtn.classList.remove('catalog__tabs-item--active')});
-  document.querySelector(`[data-target="${path}"]`).classList.add('catalog__tabs-item--active');
-  });
-});
+//   document.querySelectorAll('.catalog__tabs-item').forEach(function(tabsBtn){
+//   tabsBtn.classList.remove('catalog__tabs-item--active')});
+//   document.querySelector(`[data-target="${path}"]`).classList.add('catalog__tabs-item--active');
+//   });
+// });
 
 
