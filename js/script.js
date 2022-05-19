@@ -173,7 +173,7 @@ let galleryswiper = new Swiper('.gallery__swiper', {
     //   slidesPerGroup: 2,
     // },
 
-    1200: {
+    1281: {
       slidesPerView: 3,
       spaceBetween: 50,
       slidesPerGroup: 3,
@@ -266,7 +266,7 @@ let eventsswipper = new Swiper('.events__swipper', {
       slidesPerGroup: 2,
     },
 
-    576: {
+    610: {
       slidesPerView: 2,
       spaceBetween: 34,
       slidesPerGroup: 2,

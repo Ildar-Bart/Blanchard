@@ -1,0 +1,359 @@
+/* contacts */
+
+.contacts-top {
+  border: 1px solid #cacaca;
+}
+
+.contacts {
+  padding-top: 36px;
+  padding-bottom: 8px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contacts__app {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.contacts__list-app {
+  display: flex;
+  flex-direction: row;
+}
+
+.contacts__adress {
+  margin-bottom: 30px;
+  color: var(--color-like-black);
+}
+
+.contacts__adress-1 {
+  margin: 0;
+  margin-bottom: 8px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.contacts__adress-2 {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* кастомный form */
+
+.contacts__form {
+  max-width: 909px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+}
+
+.contacts__form-group {
+  display: flex;
+  position: relative;
+  margin-right: 20px;
+  flex: 1;
+}
+
+/* .contacts__form-group:not(:last-child) {
+  margin-right: 20px;
+} */
+
+.contacts__form-input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid var(--color-like-black);
+  border-radius: 100px;
+  padding: 8px 54px 8px 23px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-like-black);
+  transition-property: background-color;
+  transition: var(--short-line);
+}
+
+.js-validate-error-label {
+  order: -1;
+  position: absolute;
+  transform: translateY(-120%);
+  left: 21px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #d11616;
+}
+
+.contacts__form-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: var(--color-grey);
+}
+
+.contacts__form-btb {
+  flex-basis: 329px;
+  height: 50px;
+  cursor: pointer;
+  padding: 10.5px 10px;
+  padding-left: 33px;
+  padding-right: 33px;
+  border: 2px solid var(--color-amethyst);
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--color-amethyst);
+  background-color: var(--color-white);
+  transition-property: outline, background-color, color, outline-offset;
+  transition: var(--short-line);
+}
+
+.contacts__form-btb:focus-visible {
+  outline-offset: 3px;
+  outline: 2px solid var(--color-violet);
+}
+
+.contacts__form-btb:hover {
+  outline: none;
+  background-color: var(--color-amethyst);
+  color: var(--color-white);
+}
+
+.contacts__form-btb:active {
+  background-color: var(--color-crayola);
+  outline: 3px solid var(--color-light-violet);
+  outline-offset: -3px;
+}
+
+.contacts__form-input:focus-visible,
+.contacts__form-input:hover {
+  background-color: #eaeaea;
+  outline: none;
+}
+
+.contacts__form-input:active {
+  background-color: transparent;
+}
+
+.contacts__list-app-title {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--color-like-black);
+}
+
+.contacts__item-app {
+  font-size: 0;
+}
+
+.contacts__item-app:not(:last-child) {
+  margin-right: 20px;
+}
+
+.contacts__item-app-link {
+  transition: opacity var(--short-line);
+}
+
+.contacts__item-app-link:focus-visible {
+  outline: none;
+  opacity: 0.5;
+}
+
+.contacts__item-app-link:hover {
+  opacity: 0.5;
+}
+
+.contacts__item-app-link svg {
+  border-radius: 20px;
+  transition-property: opacity, outline;
+  transition: var(--short-line);
+}
+
+.contacts__item-app-link:active {
+  opacity: 1;
+}
+
+.contacts__item-app-link:active svg {
+  outline: 1px solid #9643a4;
+  opacity: 1;
+}
+
+.map__block {
+  height: 700px;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+@media (max-width: 1280px) {
+  .contacts {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 39px;
+    padding-bottom: 19px;
+  }
+
+  .contacts__adress {
+    margin-bottom: 35px;
+  }
+
+  .contacts__form {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .contacts__form-group {
+    margin-bottom: 11px;
+  }
+
+  .contacts__form {
+    width: 100%;
+    max-width: 100%;
+  }
+  .contacts__form-btb {
+    flex-basis: 343px;
+  }
+
+  .contacts__form {
+    margin-bottom: 18px;
+  }
+
+  .map__block {
+    height: 694px;
+  }
+}
+
+@media (max-width: 970px) {
+  .contacts__form {
+    flex-wrap: wrap;
+  }
+
+  .contacts__form-group {
+    flex-basis: 323px;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  .contacts__form-input {
+    width: 323px;
+  }
+
+  .contacts__form-group:first-child {
+    margin-right: 20px;
+  }
+
+  .contacts__form-btb {
+    flex-basis: 316px;
+    padding-left: 20px;
+    padding-right: 22px;
+  }
+
+  .contacts__form {
+    margin-bottom: 30px;
+  }
+
+  .contacts {
+    padding-bottom: 13px;
+  }
+
+  .map__block {
+    height: 699px;
+  }
+}
+
+@media (max-width: 610px) {
+  .contacts {
+    padding-top: 28px;
+  }
+
+  .contacts__adress-1 {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  .contacts__adress-2 {
+    font-size: 14px;
+  }
+
+  .contacts__adress {
+    margin-bottom: 12px;
+  }
+
+  .contacts__form-group {
+    margin-bottom: 20px;
+  }
+
+  .contacts__form-input {
+    width: 100%;
+    max-width: 289px;
+    height: 40px;
+  }
+
+  .contacts__form-group:first-child {
+    margin-right: 0px;
+  }
+
+  .contacts {
+    padding-bottom: 13px;
+  }
+
+  .contacts__form-btb {
+    flex-basis: 127px;
+    font-size: 12px;
+    overflow: hidden;
+    padding: 6px 21px 6px 20px;
+    height: 40px;
+  }
+
+  .contacts__list-app-title {
+    margin-bottom: 14px;
+    font-size: 17px;
+    line-height: 17px;
+  }
+
+  .contacts__form {
+    margin-bottom: 27.8px;
+  }
+
+  .contacts__item-app-link svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contacts__app {
+    margin-bottom: 7px;
+  }
+
+  .map__block {
+    height: 318px;
+  }
+}

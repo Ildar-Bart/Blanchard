@@ -1,0 +1,16 @@
+:root {
+  /* color */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-like-black: #333333;
+  --color-grey: #999999;
+  --color-amethyst: #9d5cd0;
+  --color-crayola: #7943a4;
+  --color-violet: #c283f3;
+  --color-light-violet: #91a9f0;
+  --color-smoky-white: #ececec;
+  --color-light-telegray: #cacaca;
+
+  /* transition */
+  --short-line: 0.3s ease-in-out;
+}
