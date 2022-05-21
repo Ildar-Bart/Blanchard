@@ -1,39 +1,46 @@
 
-.modal-all {
+/* .modals {
   display: none;
-  background: rgba(0, 0, 0, 0.6);
+} */
+
+
+
+.modal-overlay {
   position: fixed;
-  width: 100%;
-  height: 100%;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  z-index: 10000;
-}
 
-.modal-all.active {
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
-  transform: translateX(0);
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-.gallery__big-image {
+.modal {
   max-width: 900px;
   height: 500px;
   background-color: var(--color-white);
   box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.8);
+  flex-direction: row;
+  display: none;
 }
 
-.gallery__big-image img {
+.modal__big-image img {
   font-size: 0;
   float: left;
   height: 100%;
 }
 
-.gallery__content-image {
+.modal__content-image {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -41,27 +48,30 @@
   padding: 121px 50px;
 }
 
-.gallery__big-image-close {
+.modal__window-close-btn {
   position: absolute;
   top: 4%;
   right: 4%;
 }
 
-.gallery__name-painter {
+.modal__name-painter {
+  margin: 0;
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
   color: var(--color-like-black);
 }
 
-.gallery__picture-painter {
+.modal__picture-painter {
+  margin: 0;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
   color: var(--color-like-black);
 }
 
-.gallery__painted-picture {
+.modal__painted-picture {
+  margin: 0;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
@@ -69,9 +79,22 @@
   margin-bottom: 33px;
 }
 
-.gallery__content-picture {
+.modal__content-picture {
+  margin: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
   color: var(--color-like-black);
 }
+
+
+.modal-overlay--visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all var(--short-line);
+}
+
+.modal--visible {
+  display: flex
+}
+

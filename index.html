@@ -53,6 +53,7 @@
 
     <script src="js/script.js" defer></script>
     <script src="js/mod.js" defer></script>
+    <script src="js/modal-window.js" defer></script>
 
     <title>BLANCHARD</title>
   </head>
@@ -674,8 +675,9 @@
 
               <div class="swiper-wrapper gallery__swiper-wrapper">
                 <button
-                  class="swiper-slide gallery__swiper-slide btn-reset"
+                  class="swiper-slide gallery__swiper-slide btn-reset btn-modal"
                   aria-label="увеличть картинку"
+                  data-path="Kazimir_Malevich-1"
                 >
                   <picture>
                     <source
@@ -698,8 +700,9 @@
                   </picture>
                 </button>
                 <button
-                  class="swiper-slide gallery__swiper-slide btn-reset"
+                  class="swiper-slide gallery__swiper-slide btn-reset btn-modal"
                   aria-label="увеличть картинку"
+                  data-path="Kazimir_Malevich-2"
                 >
                   <picture>
                     <source
@@ -722,8 +725,9 @@
                   </picture>
                 </button>
                 <button
-                  class="swiper-slide gallery__swiper-slide btn-reset"
+                  class="swiper-slide gallery__swiper-slide btn-reset btn-modal"
                   aria-label="увеличть картинку"
+                  data-path="Kazimir_Malevich-1"
                 >
                   <picture>
                     <source
@@ -746,8 +750,9 @@
                   </picture>
                 </button>
                 <button
-                  class="swiper-slide gallery__swiper-slide btn-reset"
+                  class="swiper-slide gallery__swiper-slide btn-reset btn-modal"
                   aria-label="увеличть картинку"
+                  data-path="Kazimir_Malevich-1"
                 >
                   <picture>
                     <source
@@ -770,8 +775,9 @@
                   </picture>
                 </button>
                 <button
-                  class="swiper-slide gallery__swiper-slide btn-reset"
+                  class="swiper-slide gallery__swiper-slide btn-reset btn-modal"
                   aria-label="увеличть картинку"
+                  data-path="Kazimir_Malevich-1"
                 >
                   <picture>
                     <source
@@ -794,8 +800,9 @@
                   </picture>
                 </button>
                 <button
-                  class="swiper-slide gallery__swiper-slide btn-reset"
+                  class="swiper-slide gallery__swiper-slide btn-reset btn-modal"
                   aria-label="увеличть картинку"
+                  data-path="Kazimir_Malevich-1"
                 >
                   <picture>
                     <source
@@ -819,56 +826,100 @@
                 </button>
               </div>
             </div>
+          </div>
+        </div>
 
-            <div class="modal-all">
-              <div class="gallery__big-image">
-                <img
-                  src="img/gallery/Rectangle93.jpg"
-                  alt="woman with a rake"
-                />
-                <div class="gallery__content-image">
-                  <button
-                    class="gallery__big-image-close btn-reset"
-                    aria-label="закрыть окно"
+        <div class="modals">
+          <div class="modal-overlay">
+            <div class="modal madal--1" data-target="Kazimir_Malevich-1">
+              <img
+                src="img/gallery/Rectangle93.jpg"
+                alt="woman with a rake"
+              />
+              <div class="modal__content-image">
+                <button
+                  class="modal__window-close-btn btn-reset"
+                  aria-label="закрыть окно"
+                >
+                  <svg class="modal__window-close-btn-svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z"
-                        fill="black"
-                      ></path>
-                      <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
-                        d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
-                        fill="black"
-                      ></path>
-                    </svg>
-                  </button>
-                  <h3 class="gallery__name-painter">Казимир Малевич</h3>
-                  <h4 class="gallery__picture-painter">
-                    “Женщина с&nbsp;граблями”
-                  </h4>
-                  <span class="gallery__painted-picture">1931-1932</span>
-                  <p class="gallery__content-picture">
-                    Картина из&nbsp;второй серии крестьянского цикла работ
-                    Казимира Малевича. Художник принялся за её&nbsp;создание
-                    в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был
-                    утерян после Берлинской&nbsp;и Варшавской выставок
-                    в&nbsp;1927&nbsp;году.
-                  </p>
-                </div>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                      fill="black"
+                    ></path>
+                  </svg>
+                </button>
+                <h3 class="modal__name-painter">Казимир Малевич</h3>
+                <h4 class="modal__picture-painter">
+                  “Уборка ржи”
+                </h4>
+                <span class="modal__painted-picture">1912</span>
+                <p class="modal__content-picture">
+                  Данных нет.
+                </p>
+              </div>
+            </div>
+            <div class="modal modal--2" data-target="Kazimir_Malevich-2">
+              <img
+                src="img/gallery/Rectangle93.jpg"
+                alt="woman with a rake"
+              />
+              <div class="modal__content-image">
+                <button
+                  class="modal__window-close-btn btn-reset"
+                  aria-label="закрыть окно"
+                >
+                  <svg class="modal__window-close-btn-svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z"
+                      fill="black"
+                    ></path>
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                      fill="black"
+                    ></path>
+                  </svg>
+                </button>
+                <h3 class="modal__name-painter">Казимир Малевич</h3>
+                <h4 class="modal__picture-painter">
+                  “Женщина с&nbsp;граблями”
+                </h4>
+                <span class="modal__painted-picture">1931-1932</span>
+                <p class="modal__content-picture">
+                  Картина из&nbsp;второй серии крестьянского цикла работ
+                  Казимира Малевича. Художник принялся за её&nbsp;создание
+                  в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был
+                  утерян после Берлинской&nbsp;и Варшавской выставок
+                  в&nbsp;1927&nbsp;году.
+                </p>
               </div>
             </div>
           </div>
         </div>
+
       </section>
 
 
