@@ -1,10 +1,3 @@
-
-/* .modals {
-  display: none;
-} */
-
-
-
 .modal-overlay {
   position: fixed;
   top: 0px;
@@ -26,7 +19,9 @@
 }
 
 .modal {
+  position: relative;
   max-width: 900px;
+  width: 100%;
   height: 500px;
   background-color: var(--color-white);
   box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.8);
@@ -34,18 +29,20 @@
   display: none;
 }
 
-.modal__big-image img {
+.modal__img {
   font-size: 0;
-  float: left;
   height: 100%;
+  width: 400px;
 }
 
 .modal__content-image {
-  position: relative;
+  max-width: 500px;
+  width: 100%;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 121px 50px;
+  padding: 121px 49px;
 }
 
 .modal__window-close-btn {
@@ -87,14 +84,117 @@
   color: var(--color-like-black);
 }
 
-
 .modal-overlay--visible {
   opacity: 1;
   visibility: visible;
-  transition: all var(--short-line);
+  transition-property: opacity;
+  transition: var(--short-line);
 }
 
 .modal--visible {
-  display: flex
+  display: flex;
 }
 
+.modal__window-close-btn:focus-visible {
+  outline: none;
+}
+
+.modal__window-close-btn-svg path {
+  transition: fill var(--short-line);
+}
+
+.modal__window-close-btn:focus-visible path,
+.modal__window-close-btn:hover path {
+  fill: var(--color-amethyst);
+}
+
+.modal__window-close-btn:active path {
+  fill: var(--color-crayola);
+  transition: none;
+}
+
+@media (max-width: 1280px) {
+  .modal {
+    max-width: 593px;
+    height: 593px;
+  }
+
+  .modal__content-image {
+    max-width: 330px;
+    padding-right: 37px;
+  }
+
+  .modal__window-close-btn {
+    top: 3%;
+    right: 6%;
+  }
+}
+
+@media (max-width: 970px) {
+  .modal {
+    margin: 0 50px;
+    max-width: 668px;
+    height: 594px;
+  }
+
+  .modal__content-image {
+    max-width: 366px;
+    width: 100%;
+    padding-right: 47px;
+    padding-top: 124px;
+  }
+
+  .modal__window-close-btn {
+    top: 4%;
+    right: 5%;
+  }
+
+  .modal__img {
+    font-size: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 610px) {
+  .modal {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .modal__content-image {
+    max-width: unset;
+    padding: 40px;
+    min-height: 295px;
+  }
+}
+
+@media (max-width: 441px) {
+  .modal {
+    margin: 0 15px;
+  }
+
+  .modal__content-image {
+    max-width: unset;
+    padding: 18px 23px 26px 20px;
+    min-height: 300px;
+  }
+
+  .modal__name-painter {
+    line-height: 31px;
+  }
+
+  .modal__painted-picture {
+    margin-bottom: 3px;
+  }
+
+  .modal__window-close-btn {
+    top: 1.6%;
+    right: 3.3%;
+  }
+
+  .modal__name-painter {
+    margin-left: -2px;
+    line-height: 30px;
+  }
+}
