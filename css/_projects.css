@@ -28,9 +28,9 @@
   font-size: 12px;
   color: var(--color-black);
   background-color: transparent;
-  cursor: pointer;
-  text-align: center;
-  vertical-align: middle;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   transition-property: background-color, color;
   transition: var(--short-line);
 }
