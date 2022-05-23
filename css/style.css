@@ -1,5 +1,5 @@
-@import url('/css/_global.css');
-@import url('/css/_root.css');
+@import url('../css/_global.css');
+@import url('../css/_root.css');
 @import url('/css/_header.css');
 @import url('/css/_hero.css');
 @import url('/css/_about.css');
