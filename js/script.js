@@ -280,7 +280,7 @@ let eventsswipper = new Swiper('.events__swipper', {
 
     1281: {
       slidesPerView: 3,
-      spaceBetween: 50,
+      spaceBetween: 49.5,
       slidesPerGroup: 3,
     }
   },
