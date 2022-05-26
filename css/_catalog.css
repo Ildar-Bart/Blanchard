@@ -357,10 +357,6 @@
     height: 110px;
   }
 
-  .catalog__accordion-content {
-    margin-bottom: 51px;
-  }
-
   .catalog__tabs-wrap-title {
     margin-bottom: 8px;
   }
@@ -381,9 +377,17 @@
     width: 376px;
     height: 110px;
   }
+
+  .catalog__tabs-nav-item:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
 @media (max-width: 970px) {
+  .projects {
+    padding-bottom: 82px;
+  }
+
   .catalog__block-bottom {
     flex-direction: column-reverse;
   }
@@ -411,6 +415,13 @@
     width: 63%;
   }
 
+  .catalog__accordion-content {
+    margin-bottom: 49px;
+  }
+
+  .catalog__tabs-wrap {
+    padding-bottom: 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -501,5 +512,4 @@
     width: 67%;
     height: 111px;
   }
-
 }

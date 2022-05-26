@@ -47,7 +47,7 @@
   flex-wrap: wrap;
 }
 
-.header__nav-item {
+.header__nav-item:not(:last-child) {
   margin-right: 62.5px;
 }
 

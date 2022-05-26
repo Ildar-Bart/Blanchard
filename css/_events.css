@@ -201,7 +201,7 @@
 
 @media (max-width: 1280px) {
   .events {
-    padding-top: 43px;
+    padding-top: 42px;
   }
 
   .events-title {
@@ -265,6 +265,10 @@
 }
 
 @media (max-width: 970px) {
+  .events {
+    padding-top: 31px;
+  }
+
   .events__item-content {
     padding-top: 16px;
     padding-right: 20px;
@@ -308,5 +312,11 @@
 
   .events__swiper-pagination {
     padding-top: 8px;
+  }
+}
+
+@media (max-width: 610px) {
+  .events {
+    padding-bottom: 25px;
   }
 }

@@ -217,8 +217,8 @@
   .contacts {
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 39px;
-    padding-bottom: 19px;
+    padding-top: 41px;
+    padding-bottom: 13px;
   }
 
   .contacts__adress {
@@ -247,7 +247,7 @@
   }
 
   .map__block {
-    height: 694px;
+    height: 700px;
   }
 }
 
@@ -285,7 +285,7 @@
   }
 
   .map__block {
-    height: 699px;
+    height: 697px;
   }
 }
 
@@ -354,6 +354,6 @@
   }
 
   .map__block {
-    height: 318px;
+    height: 319px;
   }
 }
